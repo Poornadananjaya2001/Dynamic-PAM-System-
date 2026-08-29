@@ -42,7 +42,7 @@ This research project meets all university requirements as confirmed during supe
 
 ## Acknowledgment
 
-I express my sincere gratitude to my supervisor, **Ms. Ama Jayaweera**, for her invaluable guidance, continuous support, and insightful feedback throughout this research project. Her expertise in cybersecurity, threat modeling, and academic mentorship were instrumental in shaping the conceptual design, rigorous testing methodology, and formal presentation of this work.
+I express my sincere gratitude to my supervisor, **Mr. Mevan Jayathilaka**, for her invaluable guidance, continuous support, and insightful feedback throughout this research project. Her expertise in cybersecurity, threat modeling, and academic mentorship were instrumental in shaping the conceptual design, rigorous testing methodology, and formal presentation of this work.
 
 I also extend my sincere appreciation to the **115 IT and cybersecurity professionals** who generously participated in the requirements validation survey, providing crucial real-world insights into operational pain points, credential management practices, and architectural expectations that directly guided the system's software requirements specification. Finally, I thank my family and peers for their constant encouragement throughout the completion of this final year degree report.
 
