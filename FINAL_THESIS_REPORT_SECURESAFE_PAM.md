@@ -2,7 +2,7 @@
 
 **Author:** Poorna Wickramasinghe – 11312  
 **Degree:** Bachelor of Science in Computer Networks & Cyber Security (Hons)  
-**Faculty:** Kiu University Sri Lanka  
+**Faculty:** Faculty Of Computer Science & Engineering  
 **Supervisor:** Mr. Mevan Jayathilaka
 **Date:** August 2026, Colombo  
 
