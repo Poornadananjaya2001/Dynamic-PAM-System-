@@ -1,0 +1,16 @@
+PAM System Classification Metrics
+========================================
+
+Per-Class Metrics:
+Risk Level  Precision  Recall  F1-Score  Support  Accuracy
+    Normal      0.966   0.967     0.967      923     0.967
+    Medium      0.822   0.716     0.766      335     0.716
+      High      0.702   0.727     0.714      220     0.727
+  Critical      0.556   0.811     0.659       74     0.811
+
+Aggregate Metrics:
+Overall Accuracy: 0.872
+Macro Avg Precision: 0.761
+Macro Avg Recall: 0.805
+Macro Avg F1-Score: 0.777
+Weighted Avg F1-Score: 0.873

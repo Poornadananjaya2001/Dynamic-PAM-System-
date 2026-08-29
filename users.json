@@ -1,0 +1,104 @@
+{
+  "wikzpoorna@gmail.com": {
+    "name": "Poorna Wickramasinghe",
+    "role": "System Admin",
+    "password_hash": "scrypt:32768:8:1$vTYTtIuJZuZqArX9$dc046dee5b4df3a20db8de755039566ca061ce05b4bddd9183de782c72c992a677be38f013058b9dac7899e269d11d2bf311ef4605e8f4e6a68c3bdb76c772fb",
+    "status": "active",
+    "temp_password_active": false
+  },
+  "admin@company.com": {
+    "name": "Poorna Wickramasinghe",
+    "role": "System Admin",
+    "password_hash": "scrypt:32768:8:1$9TbAStloqPqnGxZ1$3ac65cfa25b4d7c74f7fabe7cdcbf24728f36bdaa0f37b3f5b27777d787d72e5aabe642837f2f9853e0bfc1262e3b6305462614a165ada2b34e8f727b7ca77e0",
+    "status": "active",
+    "temp_password_active": false,
+    "last_login": "2026-08-29T11:32:12.512981"
+  },
+  "rperera.test@gmail.com": {
+    "name": "R. Perera",
+    "role": "Database Admin",
+    "password_hash": "scrypt:32768:8:1$8ejMigRJnix4mT1H$86fd938596c29013d857581f42b03f202daedee65652a03659c25915e9185f1e23d63e97c3829157565a6ae277297a782d9b7cf92288ec417a8e44d2c46da10b",
+    "status": "active",
+    "temp_password_active": false,
+    "invited_at": "2026-08-28T19:06:11.618623",
+    "last_login": null
+  },
+  "sfernando.test@gmail.com": {
+    "name": "S. Fernando",
+    "role": "Network Engineer",
+    "password_hash": "scrypt:32768:8:1$YccHi2TOZ2K4pcrB$74df886c2bb447ceb39c27e672ec9605e04f600b1eb3cc218b0c5d4c76ba1808a12dc67d50b06610bde8760950a81f7554b5f94952e018e8a81a353d253340c3",
+    "status": "active",
+    "temp_password_active": false,
+    "invited_at": "2026-08-28T19:06:11.929994",
+    "last_login": null
+  },
+  "asilva.test@gmail.com": {
+    "name": "A. Silva",
+    "role": "App Developer",
+    "password_hash": "scrypt:32768:8:1$T52f1jqxWkOI6EBy$e37ff02885e99e91e37a020abd92e1c661db2cadf8eb34d2a76a5ec29bf359428f5f7b743e1c7af26c80a2e0e17f6c2e2b291bca98c489d1cb8aafcfbd4611c1",
+    "status": "active",
+    "temp_password_active": false,
+    "invited_at": "2026-08-28T19:06:12.291406",
+    "last_login": null
+  },
+  "dweerakoon.test@gmail.com": {
+    "name": "D. Weerakoon",
+    "role": "Security Auditor (Least Privilege)",
+    "password_hash": "scrypt:32768:8:1$1ZXv9y0AbiUVu20t$d4380c0bb5720790cc19ebd55ca43fe3ef85f1ecb20f1eb24a91566e0d67c14bbbe7f6e1a76b1b90b3bac143ac7a4025b091e4e2a89ba6a02c6e33dfa1a4747d",
+    "status": "invited",
+    "temp_password": "Pam#Temp2026!",
+    "temp_password_active": true,
+    "invited_at": "2026-08-28T19:06:12.693306",
+    "last_login": null
+  },
+  "new.engineer@company.com": {
+    "name": "Kasun Perera",
+    "role": "Network Engineer",
+    "password_hash": "scrypt:32768:8:1$I5GYM0tEFTLO0iRt$1c95ef1eb7f86f19b1de2d3052a97792d248956fae5550877970f633a254c05d8117de342b33ccb93cbb26fdd4cf116db51fb4fd41e359196e700d35cadcd239",
+    "temp_password": "Pam#wzGYXd",
+    "temp_password_active": true,
+    "status": "active",
+    "invited_at": "2026-08-29T11:31:55.076935",
+    "last_login": "2026-08-29T11:32:00.160438"
+  },
+  "auditor.test@company.com": {
+    "name": "Auditor User",
+    "role": "Junior Auditor",
+    "password_hash": "scrypt:32768:8:1$N31oc41qRCktF5pH$534da8db662e478459af00958365b5d047a05e2bbacc84aba363709439bca811dd93a162bc2e47d9c9604d2c33810da86a9e3c841d46dcfc4fceb7de1dba4e34",
+    "temp_password": "Pam#WYTULN",
+    "temp_password_active": true,
+    "status": "active",
+    "invited_at": "2026-08-29T11:32:06.879722",
+    "last_login": "2026-08-29T11:32:12.004839"
+  },
+  "evaluator@gmail.com": {
+    "name": "Primary Evaluator",
+    "role": "Database Admin",
+    "password_hash": "scrypt:32768:8:1$gX4rcvqRHX1wWlsv$eb36a29e4cb0294653cd99c63bd13f383b7a7abfe5e751f870e7a43561ef037488552f86d68d04e71f00bfeabc492d7ee05111363ad52e4b899b50d754331b37",
+    "temp_password": "Pam#$q7$!&",
+    "temp_password_active": true,
+    "status": "active",
+    "invited_at": "2026-08-29T11:32:12.661402",
+    "last_login": "2026-08-29T11:32:24.246490"
+  },
+  "evaluator+1@gmail.com": {
+    "name": "Secondary Alias User",
+    "role": "Network Engineer",
+    "password_hash": "scrypt:32768:8:1$tE4P5ZJl2MBsQ2X3$dd1848828a5ac0274ece011875d0a3b425fff5c111965a89cf814a3bd632ec5ba88c84e2c1b291e5905140abd5f0c9b2246a010845205d3e4ac1b3b8003cf333",
+    "temp_password": "Pam#DU&aDH",
+    "temp_password_active": true,
+    "status": "active",
+    "invited_at": "2026-08-29T11:32:17.916805",
+    "last_login": "2026-08-29T11:32:24.397294"
+  },
+  "wikzpoorna+2@gmail.com": {
+    "name": "WIKZPOORNA+2",
+    "role": "Security Auditor (Least Privilege)",
+    "password_hash": "scrypt:32768:8:1$kuD3fs5o0weB0wq1$7f3500b1f06ca55866c38f880f1973b8539e038f4b8ed857d5bb9fe91af2c982cf82a2613e0096798d3e2a25f4ddd7ba5aaed76b0b66daa3c60510751d75551b",
+    "temp_password": "Pam#6z44cr",
+    "temp_password_active": true,
+    "status": "invited",
+    "invited_at": "2026-08-28T19:47:17.567593",
+    "last_login": null
+  }
+}

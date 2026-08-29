@@ -1,0 +1,424 @@
+[
+  {
+    "id": "b8c0917f-4eb1-4d95-8a3f-0f3dde9ede97",
+    "to": "evaluator+1@gmail.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Network Engineer)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Secondary Alias User</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Network Engineer</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>evaluator+1@gmail.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#DU&aDH</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Secondary Alias User,\n\nYou have been invited to SecureSafe PAM as a Network Engineer.\n\nUsername: evaluator+1@gmail.com\nTemporary Password: Pam#DU&aDH\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Network Engineer",
+      "temp_password": "Pam#DU&aDH"
+    },
+    "timestamp": "2026-08-29T11:32:17.917846",
+    "status": "sent",
+    "smtp_delivery": "delivered_to_inbox"
+  },
+  {
+    "id": "09e7eb2a-9028-40d5-88e4-84f6802b2ac9",
+    "to": "evaluator@gmail.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Database Admin)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Primary Evaluator</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Database Admin</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>evaluator@gmail.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#$q7$!&</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Primary Evaluator,\n\nYou have been invited to SecureSafe PAM as a Database Admin.\n\nUsername: evaluator@gmail.com\nTemporary Password: Pam#$q7$!&\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Database Admin",
+      "temp_password": "Pam#$q7$!&"
+    },
+    "timestamp": "2026-08-29T11:32:12.663403",
+    "status": "sent",
+    "smtp_delivery": "delivered_to_inbox"
+  },
+  {
+    "id": "f8cc3fc4-5313-4bcf-bfca-0d91a89b5457",
+    "to": "auditor.test@company.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Junior Auditor)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Auditor User</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Junior Auditor</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>auditor.test@company.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#WYTULN</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Auditor User,\n\nYou have been invited to SecureSafe PAM as a Junior Auditor.\n\nUsername: auditor.test@company.com\nTemporary Password: Pam#WYTULN\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Junior Auditor",
+      "temp_password": "Pam#WYTULN"
+    },
+    "timestamp": "2026-08-29T11:32:06.880720",
+    "status": "sent",
+    "smtp_delivery": "delivered_to_inbox"
+  },
+  {
+    "id": "6bfe0c57-c6c0-424f-97cd-cd8f25ec3925",
+    "to": "wikzpoorna@gmail.com",
+    "subject": "SecureSafe PAM: Password Reset Verification Code",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 500px; padding: 20px; border: 1px solid #374151; background: #111827; color: #e5e7eb; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Password Reset</h2>\n        <p>Hello <strong>Poorna Wickramasinghe</strong>,</p>\n        <p>A password reset was requested for your privileged account (<code>wikzpoorna@gmail.com</code>).</p>\n        <div style=\"background: #1f2937; padding: 15px; border-radius: 8px; font-size: 20px; font-weight: bold; letter-spacing: 4px; color: #38bdf8; text-align: center; margin: 20px 0;\">\n            234BF121\n        </div>\n        <p style=\"font-size: 12px; color: #9ca3af;\">Use this code on the password reset screen. Valid for 30 minutes.</p>\n    </div>\n    ",
+    "body_text": "Hello Poorna Wickramasinghe,\n\nYour password reset verification code is: 234BF121\nThis code expires in 30 minutes.\n\nSecureSafe PAM Team",
+    "type": "password_reset",
+    "metadata": {
+      "reset_token": "234BF121"
+    },
+    "timestamp": "2026-08-29T11:32:00.478804",
+    "status": "sent",
+    "smtp_delivery": "delivered_to_inbox"
+  },
+  {
+    "id": "073d1b3d-2c20-4950-bb78-2bc32dba0183",
+    "to": "new.engineer@company.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Network Engineer)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Kasun Perera</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Network Engineer</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>new.engineer@company.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#wzGYXd</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Kasun Perera,\n\nYou have been invited to SecureSafe PAM as a Network Engineer.\n\nUsername: new.engineer@company.com\nTemporary Password: Pam#wzGYXd\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Network Engineer",
+      "temp_password": "Pam#wzGYXd"
+    },
+    "timestamp": "2026-08-29T11:31:55.077938",
+    "status": "sent",
+    "smtp_delivery": "delivered_to_inbox"
+  },
+  {
+    "id": "19092894-1dfe-4bb3-8813-d8be35bd4396",
+    "to": "evaluator+1@gmail.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Network Engineer)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Secondary Alias User</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Network Engineer</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>evaluator+1@gmail.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#FosFWV</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Secondary Alias User,\n\nYou have been invited to SecureSafe PAM as a Network Engineer.\n\nUsername: evaluator+1@gmail.com\nTemporary Password: Pam#FosFWV\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Network Engineer",
+      "temp_password": "Pam#FosFWV"
+    },
+    "timestamp": "2026-08-28T20:32:00.782480",
+    "status": "sent",
+    "smtp_delivery": "delivered_to_inbox"
+  },
+  {
+    "id": "b6e4cb00-3351-4278-b8fa-e6feaf635181",
+    "to": "evaluator@gmail.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Database Admin)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Primary Evaluator</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Database Admin</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>evaluator@gmail.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#nr8gUK</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Primary Evaluator,\n\nYou have been invited to SecureSafe PAM as a Database Admin.\n\nUsername: evaluator@gmail.com\nTemporary Password: Pam#nr8gUK\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Database Admin",
+      "temp_password": "Pam#nr8gUK"
+    },
+    "timestamp": "2026-08-28T20:31:54.179425",
+    "status": "sent",
+    "smtp_delivery": "delivered_to_inbox"
+  },
+  {
+    "id": "efa03157-af3c-4e40-a07c-2a6a693b0ffa",
+    "to": "auditor.test@company.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Junior Auditor)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Auditor User</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Junior Auditor</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>auditor.test@company.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#vwHrR*</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Auditor User,\n\nYou have been invited to SecureSafe PAM as a Junior Auditor.\n\nUsername: auditor.test@company.com\nTemporary Password: Pam#vwHrR*\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Junior Auditor",
+      "temp_password": "Pam#vwHrR*"
+    },
+    "timestamp": "2026-08-28T20:31:45.595095",
+    "status": "sent",
+    "smtp_delivery": "delivered_to_inbox"
+  },
+  {
+    "id": "6122c7ec-4503-40d4-a120-7860f1efe685",
+    "to": "wikzpoorna@gmail.com",
+    "subject": "SecureSafe PAM: Password Reset Verification Code",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 500px; padding: 20px; border: 1px solid #374151; background: #111827; color: #e5e7eb; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Password Reset</h2>\n        <p>Hello <strong>Poorna Wickramasinghe</strong>,</p>\n        <p>A password reset was requested for your privileged account (<code>wikzpoorna@gmail.com</code>).</p>\n        <div style=\"background: #1f2937; padding: 15px; border-radius: 8px; font-size: 20px; font-weight: bold; letter-spacing: 4px; color: #38bdf8; text-align: center; margin: 20px 0;\">\n            4BB688BD\n        </div>\n        <p style=\"font-size: 12px; color: #9ca3af;\">Use this code on the password reset screen. Valid for 30 minutes.</p>\n    </div>\n    ",
+    "body_text": "Hello Poorna Wickramasinghe,\n\nYour password reset verification code is: 4BB688BD\nThis code expires in 30 minutes.\n\nSecureSafe PAM Team",
+    "type": "password_reset",
+    "metadata": {
+      "reset_token": "4BB688BD"
+    },
+    "timestamp": "2026-08-28T20:31:35.781243",
+    "status": "sent",
+    "smtp_delivery": "delivered_to_inbox"
+  },
+  {
+    "id": "37887ec6-945f-4e0f-9067-9952f4a5c149",
+    "to": "new.engineer@company.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Network Engineer)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Kasun Perera</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Network Engineer</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>new.engineer@company.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#6Z93Xx</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Kasun Perera,\n\nYou have been invited to SecureSafe PAM as a Network Engineer.\n\nUsername: new.engineer@company.com\nTemporary Password: Pam#6Z93Xx\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Network Engineer",
+      "temp_password": "Pam#6Z93Xx"
+    },
+    "timestamp": "2026-08-28T20:31:22.514599",
+    "status": "sent",
+    "smtp_delivery": "failed: Connection unexpectedly closed: The read operation timed out"
+  },
+  {
+    "id": "dd6280a8-c7e6-4f9f-becc-15e323c01cf6",
+    "to": "wikzpoorna+1@gmail.com",
+    "subject": "SecureSafe PAM: New Temporary Credentials (Security Auditor (Least Privilege))",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">New Temporary Credentials</h2>\n        <p>Hello <strong>WIKZPOORNA</strong>,</p>\n        <p>A new temporary password was generated for your account:</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>wikzpoorna+1@gmail.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#eLMV6m</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Login to PAM Portal</a></p>\n    </div>\n    ",
+    "body_text": "Hello WIKZPOORNA,\n\nYour new temporary password for SecureSafe PAM is: Pam#eLMV6m\nUsername: wikzpoorna+1@gmail.com\nLogin URL: http://127.0.0.1:5000/login",
+    "type": "invitation_resend",
+    "metadata": {
+      "temp_password": "Pam#eLMV6m"
+    },
+    "timestamp": "2026-08-28T19:55:01.000305",
+    "status": "sent",
+    "smtp_delivery": "delivered_to_inbox"
+  },
+  {
+    "id": "262c54d1-b8fd-470e-8f2c-8b2929fa7e4d",
+    "to": "wikzpoorna+test1@gmail.com",
+    "subject": "SecureSafe PAM: Plus-Addressing Invitation Test!",
+    "body_html": "<div style=\"font-family: sans-serif; padding: 20px; background: #111827; color: #fff; border-radius: 12px; border: 1px solid #0891b2;\"><h2 style=\"color: #22d3ee;\">Plus-Addressing Verified!</h2><p>This email was addressed to <code>wikzpoorna+test1@gmail.com</code> and received in your primary inbox!</p><p>Username: <code>wikzpoorna+test1@gmail.com</code><br>Temporary Password: <code>Pam#LiveTest99!</code></p></div>",
+    "body_text": "Plus-Addressing Verified! Username: wikzpoorna+test1@gmail.com, Temp Password: Pam#LiveTest99!",
+    "type": "invitation",
+    "metadata": {},
+    "timestamp": "2026-08-28T19:50:55.704336",
+    "status": "sent",
+    "smtp_delivery": "delivered_to_inbox"
+  },
+  {
+    "id": "4f55d2e7-56ca-4c2a-bfd3-5e4a9e81257d",
+    "to": "wikzpoorna@gmail.com",
+    "subject": "SecureSafe PAM: Live Email Delivery Test SUCCESS!",
+    "body_html": "<div style=\"font-family: sans-serif; padding: 20px; background: #111827; color: #fff; border-radius: 12px; border: 1px solid #0891b2;\"><h2 style=\"color: #22d3ee;\">\ud83c\udf89 Live Email Delivery Successful!</h2><p>Your SecureSafe PAM system is now sending real emails over Gmail SMTP directly to your inbox!</p><p>This includes user invitations, temporary credentials, and password reset verification codes.</p></div>",
+    "body_text": "SecureSafe PAM Live Email Delivery Successful! Your PAM system is now sending real emails over Gmail SMTP directly to your inbox!",
+    "type": "invitation",
+    "metadata": {},
+    "timestamp": "2026-08-28T19:50:10.618718",
+    "status": "sent",
+    "smtp_delivery": "delivered_to_inbox"
+  },
+  {
+    "id": "bd6de8a0-26d4-4389-b151-6ee2df805953",
+    "to": "wikzpoorna@gmail.com",
+    "subject": "SecureSafe PAM: Live Email Connection Verified!",
+    "body_html": "<h2>Live SMTP Verified!</h2><p>Your SecureSafe PAM system is successfully connected to Gmail SMTP and sending real live emails!</p>",
+    "body_text": "Your SecureSafe PAM system is successfully connected to Gmail SMTP and sending real live emails!",
+    "type": "invitation",
+    "metadata": {},
+    "timestamp": "2026-08-28T19:48:39.238677",
+    "status": "sent",
+    "smtp_delivery": "failed: name 'MIMEMultipart' is not defined"
+  },
+  {
+    "id": "bf04b551-0e43-4dfb-ba64-6971c2379d6e",
+    "to": "wikzpoorna+2@gmail.com",
+    "subject": "SecureSafe PAM: New Temporary Credentials (Security Auditor (Least Privilege))",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">New Temporary Credentials</h2>\n        <p>Hello <strong>WIKZPOORNA+2</strong>,</p>\n        <p>A new temporary password was generated for your account:</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>wikzpoorna+2@gmail.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#6z44cr</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Login to PAM Portal</a></p>\n    </div>\n    ",
+    "body_text": "Hello WIKZPOORNA+2,\n\nYour new temporary password for SecureSafe PAM is: Pam#6z44cr\nUsername: wikzpoorna+2@gmail.com\nLogin URL: http://127.0.0.1:5000/login",
+    "type": "invitation_resend",
+    "metadata": {
+      "temp_password": "Pam#6z44cr"
+    },
+    "timestamp": "2026-08-28T19:47:17.567593",
+    "status": "sent"
+  },
+  {
+    "id": "22124494-21d9-48a9-bdd0-74d31a4df7e7",
+    "to": "wikzpoorna+2@gmail.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Security Auditor (Least Privilege))",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>WIKZPOORNA+2</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Security Auditor (Least Privilege)</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>wikzpoorna+2@gmail.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#qQ6N2V</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello WIKZPOORNA+2,\n\nYou have been invited to SecureSafe PAM as a Security Auditor (Least Privilege).\n\nUsername: wikzpoorna+2@gmail.com\nTemporary Password: Pam#qQ6N2V\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Security Auditor (Least Privilege)",
+      "temp_password": "Pam#qQ6N2V"
+    },
+    "timestamp": "2026-08-28T19:45:21.369080",
+    "status": "sent"
+  },
+  {
+    "id": "6159c03d-e216-4d16-b630-ff5c68c34069",
+    "to": "evaluator+1@gmail.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Network Engineer)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Secondary Alias User</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Network Engineer</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>evaluator+1@gmail.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#!V$4kc</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Secondary Alias User,\n\nYou have been invited to SecureSafe PAM as a Network Engineer.\n\nUsername: evaluator+1@gmail.com\nTemporary Password: Pam#!V$4kc\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Network Engineer",
+      "temp_password": "Pam#!V$4kc"
+    },
+    "timestamp": "2026-08-28T19:25:11.013259",
+    "status": "sent",
+    "smtp_delivery": "smtp_credentials_not_configured"
+  },
+  {
+    "id": "f68739cd-50f0-418d-b8af-cafc83c02df4",
+    "to": "evaluator@gmail.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Database Admin)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Primary Evaluator</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Database Admin</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>evaluator@gmail.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#bkW#cb</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Primary Evaluator,\n\nYou have been invited to SecureSafe PAM as a Database Admin.\n\nUsername: evaluator@gmail.com\nTemporary Password: Pam#bkW#cb\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Database Admin",
+      "temp_password": "Pam#bkW#cb"
+    },
+    "timestamp": "2026-08-28T19:25:10.323979",
+    "status": "sent",
+    "smtp_delivery": "smtp_credentials_not_configured"
+  },
+  {
+    "id": "1abd5fc8-f10e-4a23-a380-cea76f9c6f71",
+    "to": "auditor.test@company.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Junior Auditor)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Auditor User</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Junior Auditor</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>auditor.test@company.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#$pyCWS</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Auditor User,\n\nYou have been invited to SecureSafe PAM as a Junior Auditor.\n\nUsername: auditor.test@company.com\nTemporary Password: Pam#$pyCWS\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Junior Auditor",
+      "temp_password": "Pam#$pyCWS"
+    },
+    "timestamp": "2026-08-28T19:25:06.670088",
+    "status": "sent",
+    "smtp_delivery": "smtp_credentials_not_configured"
+  },
+  {
+    "id": "c86caa02-39bd-470e-abb9-12d300fd31f6",
+    "to": "wikzpoorna@gmail.com",
+    "subject": "SecureSafe PAM: Password Reset Verification Code",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 500px; padding: 20px; border: 1px solid #374151; background: #111827; color: #e5e7eb; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Password Reset</h2>\n        <p>Hello <strong>Poorna Wickramasinghe</strong>,</p>\n        <p>A password reset was requested for your privileged account (<code>wikzpoorna@gmail.com</code>).</p>\n        <div style=\"background: #1f2937; padding: 15px; border-radius: 8px; font-size: 20px; font-weight: bold; letter-spacing: 4px; color: #38bdf8; text-align: center; margin: 20px 0;\">\n            FD6FE3FB\n        </div>\n        <p style=\"font-size: 12px; color: #9ca3af;\">Use this code on the password reset screen. Valid for 30 minutes.</p>\n    </div>\n    ",
+    "body_text": "Hello Poorna Wickramasinghe,\n\nYour password reset verification code is: FD6FE3FB\nThis code expires in 30 minutes.\n\nSecureSafe PAM Team",
+    "type": "password_reset",
+    "metadata": {
+      "reset_token": "FD6FE3FB"
+    },
+    "timestamp": "2026-08-28T19:25:03.420971",
+    "status": "sent",
+    "smtp_delivery": "smtp_credentials_not_configured"
+  },
+  {
+    "id": "1ad5314d-9d02-4ced-be1c-60247341e5ba",
+    "to": "new.engineer@company.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Network Engineer)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Kasun Perera</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Network Engineer</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>new.engineer@company.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#%gHBhk</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Kasun Perera,\n\nYou have been invited to SecureSafe PAM as a Network Engineer.\n\nUsername: new.engineer@company.com\nTemporary Password: Pam#%gHBhk\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Network Engineer",
+      "temp_password": "Pam#%gHBhk"
+    },
+    "timestamp": "2026-08-28T19:25:02.428766",
+    "status": "sent",
+    "smtp_delivery": "smtp_credentials_not_configured"
+  },
+  {
+    "id": "82593d8a-d782-491f-b40c-b88688d7d5b7",
+    "to": "wikzpoorna+1@gmail.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Security Auditor (Least Privilege))",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>WIKZPOORNA</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Security Auditor (Least Privilege)</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>wikzpoorna+1@gmail.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#C7QySb</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello WIKZPOORNA,\n\nYou have been invited to SecureSafe PAM as a Security Auditor (Least Privilege).\n\nUsername: wikzpoorna+1@gmail.com\nTemporary Password: Pam#C7QySb\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Security Auditor (Least Privilege)",
+      "temp_password": "Pam#C7QySb"
+    },
+    "timestamp": "2026-08-28T19:19:19.739065",
+    "status": "sent"
+  },
+  {
+    "id": "e99b84e2-7b06-4bf4-a1a6-10d0d9bb3150",
+    "to": "auditor.test@company.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Junior Auditor)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Auditor User</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Junior Auditor</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>auditor.test@company.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#SH7Uz#</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Auditor User,\n\nYou have been invited to SecureSafe PAM as a Junior Auditor.\n\nUsername: auditor.test@company.com\nTemporary Password: Pam#SH7Uz#\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Junior Auditor",
+      "temp_password": "Pam#SH7Uz#"
+    },
+    "timestamp": "2026-08-28T19:12:56.924998",
+    "status": "sent"
+  },
+  {
+    "id": "20b8a17c-ca01-41df-9b5e-1869d4c5860b",
+    "to": "wikzpoorna@gmail.com",
+    "subject": "SecureSafe PAM: Password Reset Verification Code",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 500px; padding: 20px; border: 1px solid #374151; background: #111827; color: #e5e7eb; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Password Reset</h2>\n        <p>Hello <strong>Poorna Wickramasinghe</strong>,</p>\n        <p>A password reset was requested for your privileged account (<code>wikzpoorna@gmail.com</code>).</p>\n        <div style=\"background: #1f2937; padding: 15px; border-radius: 8px; font-size: 20px; font-weight: bold; letter-spacing: 4px; color: #38bdf8; text-align: center; margin: 20px 0;\">\n            9BC1FF1A\n        </div>\n        <p style=\"font-size: 12px; color: #9ca3af;\">Use this code on the password reset screen. Valid for 30 minutes.</p>\n    </div>\n    ",
+    "body_text": "Hello Poorna Wickramasinghe,\n\nYour password reset verification code is: 9BC1FF1A\nThis code expires in 30 minutes.\n\nSecureSafe PAM Team",
+    "type": "password_reset",
+    "metadata": {
+      "reset_token": "9BC1FF1A"
+    },
+    "timestamp": "2026-08-28T19:12:53.482406",
+    "status": "sent"
+  },
+  {
+    "id": "3ab091ec-94c8-45a9-a334-ebd0a66a31cd",
+    "to": "new.engineer@company.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Network Engineer)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Kasun Perera</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Network Engineer</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>new.engineer@company.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#UQxnwb</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Kasun Perera,\n\nYou have been invited to SecureSafe PAM as a Network Engineer.\n\nUsername: new.engineer@company.com\nTemporary Password: Pam#UQxnwb\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Network Engineer",
+      "temp_password": "Pam#UQxnwb"
+    },
+    "timestamp": "2026-08-28T19:12:51.811892",
+    "status": "sent"
+  },
+  {
+    "id": "5a507ae5-6630-4447-a690-eb73fb14b4bb",
+    "to": "auditor.test@company.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Junior Auditor)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Auditor User</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Junior Auditor</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>auditor.test@company.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#HJAyyB</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Auditor User,\n\nYou have been invited to SecureSafe PAM as a Junior Auditor.\n\nUsername: auditor.test@company.com\nTemporary Password: Pam#HJAyyB\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Junior Auditor",
+      "temp_password": "Pam#HJAyyB"
+    },
+    "timestamp": "2026-08-28T19:12:14.319045",
+    "status": "sent"
+  },
+  {
+    "id": "c5016c58-f3d1-4726-85c3-d4f607b208ff",
+    "to": "wikzpoorna@gmail.com",
+    "subject": "SecureSafe PAM: Password Reset Verification Code",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 500px; padding: 20px; border: 1px solid #374151; background: #111827; color: #e5e7eb; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Password Reset</h2>\n        <p>Hello <strong>Poorna Wickramasinghe</strong>,</p>\n        <p>A password reset was requested for your privileged account (<code>wikzpoorna@gmail.com</code>).</p>\n        <div style=\"background: #1f2937; padding: 15px; border-radius: 8px; font-size: 20px; font-weight: bold; letter-spacing: 4px; color: #38bdf8; text-align: center; margin: 20px 0;\">\n            6616D376\n        </div>\n        <p style=\"font-size: 12px; color: #9ca3af;\">Use this code on the password reset screen. Valid for 30 minutes.</p>\n    </div>\n    ",
+    "body_text": "Hello Poorna Wickramasinghe,\n\nYour password reset verification code is: 6616D376\nThis code expires in 30 minutes.\n\nSecureSafe PAM Team",
+    "type": "password_reset",
+    "metadata": {
+      "reset_token": "6616D376"
+    },
+    "timestamp": "2026-08-28T19:12:12.974748",
+    "status": "sent"
+  },
+  {
+    "id": "51911309-9be0-4339-b4f8-f5dee60d17c4",
+    "to": "auditor.test@company.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Junior Auditor)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Auditor User</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Junior Auditor</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>auditor.test@company.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#kdfg4a</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Auditor User,\n\nYou have been invited to SecureSafe PAM as a Junior Auditor.\n\nUsername: auditor.test@company.com\nTemporary Password: Pam#kdfg4a\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Junior Auditor",
+      "temp_password": "Pam#kdfg4a"
+    },
+    "timestamp": "2026-08-28T19:11:28.485669",
+    "status": "sent"
+  },
+  {
+    "id": "ae5866ec-8efe-4fc5-ae65-40c2e631b9be",
+    "to": "wikzpoorna@gmail.com",
+    "subject": "SecureSafe PAM: Password Reset Verification Code",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 500px; padding: 20px; border: 1px solid #374151; background: #111827; color: #e5e7eb; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Password Reset</h2>\n        <p>Hello <strong>Poorna Wickramasinghe</strong>,</p>\n        <p>A password reset was requested for your privileged account (<code>wikzpoorna@gmail.com</code>).</p>\n        <div style=\"background: #1f2937; padding: 15px; border-radius: 8px; font-size: 20px; font-weight: bold; letter-spacing: 4px; color: #38bdf8; text-align: center; margin: 20px 0;\">\n            18370808\n        </div>\n        <p style=\"font-size: 12px; color: #9ca3af;\">Use this code on the password reset screen. Valid for 30 minutes.</p>\n    </div>\n    ",
+    "body_text": "Hello Poorna Wickramasinghe,\n\nYour password reset verification code is: 18370808\nThis code expires in 30 minutes.\n\nSecureSafe PAM Team",
+    "type": "password_reset",
+    "metadata": {
+      "reset_token": "18370808"
+    },
+    "timestamp": "2026-08-28T19:11:25.925038",
+    "status": "sent"
+  },
+  {
+    "id": "5bbe105c-e715-4994-8f8c-2a220dc30d9c",
+    "to": "new.engineer@company.com",
+    "subject": "Privileged Access Invitation: Welcome to SecureSafe PAM (Network Engineer)",
+    "body_html": "\n    <div style=\"font-family: sans-serif; max-width: 520px; padding: 24px; border: 1px solid #374151; background: #111827; color: #f3f4f6; border-radius: 12px;\">\n        <h2 style=\"color: #22d3ee; margin-top: 0;\">SecureSafe PAM Invitation</h2>\n        <p>Hello <strong>Kasun Perera</strong>,</p>\n        <p>You have been granted access to the Dynamic Privileged Access Management System with the role: <strong style=\"color: #38bdf8;\">Network Engineer</strong>.</p>\n        <div style=\"background: #1f2937; padding: 16px; border-radius: 8px; margin: 18px 0; border: 1px solid #374151;\">\n            <p style=\"margin: 0 0 8px 0;\"><strong>Username:</strong> <code>new.engineer@company.com</code></p>\n            <p style=\"margin: 0;\"><strong>Temporary Password:</strong> <code style=\"color: #34d399; font-weight: bold;\">Pam#SBkcQ7</code></p>\n        </div>\n        <p><a href=\"http://127.0.0.1:5000/login\" style=\"background: #0891b2; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;\">Access PAM Portal</a></p>\n        <p style=\"font-size: 12px; color: #9ca3af; margin-top: 20px;\">For security reasons, please change your password upon initial sign-in.</p>\n    </div>\n    ",
+    "body_text": "Hello Kasun Perera,\n\nYou have been invited to SecureSafe PAM as a Network Engineer.\n\nUsername: new.engineer@company.com\nTemporary Password: Pam#SBkcQ7\nLogin URL: http://127.0.0.1:5000/login\n\nPlease log in and update your password.\n\nSecureSafe PAM Administration",
+    "type": "invitation",
+    "metadata": {
+      "role": "Network Engineer",
+      "temp_password": "Pam#SBkcQ7"
+    },
+    "timestamp": "2026-08-28T19:11:25.518600",
+    "status": "sent"
+  }
+]

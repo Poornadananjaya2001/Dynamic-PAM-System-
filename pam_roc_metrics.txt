@@ -1,0 +1,18 @@
+PAM System ROC Curve Analysis
+===================================
+
+Individual Class AUC Values:
+      Normal: 0.997
+      Medium: 0.978
+        High: 0.977
+    Critical: 0.987
+
+Aggregate Metrics:
+Micro-average: 0.990
+Macro-average: 0.985
+
+Performance Assessment:
+      Normal: Excellent
+      Medium: Excellent
+        High: Excellent
+    Critical: Excellent

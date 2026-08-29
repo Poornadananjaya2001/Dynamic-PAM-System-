@@ -1,0 +1,5 @@
+Risk Level,Precision,Recall,F1-Score,Support,Accuracy
+Normal,0.966,0.967,0.967,923,0.967
+Medium,0.822,0.716,0.766,335,0.716
+High,0.702,0.727,0.714,220,0.727
+Critical,0.556,0.811,0.659,74,0.811

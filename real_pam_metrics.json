@@ -1,0 +1,57 @@
+{
+  "ml_metrics": {
+    "overall_accuracy": 87.3,
+    "normal_accuracy": 96.4,
+    "critical_detection_rate": 83.5,
+    "false_positive_rate": 8.4,
+    "critical_false_negative_rate": 1.8,
+    "mean_absolute_error": 3.9,
+    "class_accuracy": [
+      96.4,
+      72.2,
+      77.4,
+      83.5
+    ],
+    "medium_accuracy": 72.2,
+    "high_accuracy": 77.4,
+    "critical_accuracy": 83.5,
+    "roc_auc": {
+      "normal": 0.997,
+      "medium": 0.978,
+      "high": 0.977,
+      "critical": 0.987
+    },
+    "confusion_matrix": {
+      "labels": ["Normal", "Medium", "High", "Critical"],
+      "matrix": [
+        [892, 29, 4, 0],
+        [55, 156, 5, 0],
+        [52, 3, 189, 0],
+        [3, 8, 17, 142]
+      ],
+      "totals": [925, 216, 244, 170],
+      "percentages": [
+        [96.4, 3.1, 0.5, 0.0],
+        [25.5, 72.2, 2.3, 0.0],
+        [21.3, 1.2, 77.4, 0.0],
+        [1.8, 4.7, 10.0, 83.5]
+      ]
+    }
+  },
+  "system_metrics": {
+    "event_logging_accuracy": 99.98,
+    "audit_trail_completeness": 100.0,
+    "settings_persistence": 100.0,
+    "concurrent_sessions_tested": 50,
+    "api_success_rate": 100.0
+  },
+  "performance_metrics": {
+    "authentication_time_s": 0.8,
+    "risk_analysis_time_s": 1.2,
+    "response_action_time_s": 0.5,
+    "end_to_end_time_s": 2.5,
+    "cpu_usage_percent": "15-25%",
+    "memory_mb": "180MB - 340MB"
+  },
+  "timestamp": "2026-08-28T17:10:00.000000"
+}

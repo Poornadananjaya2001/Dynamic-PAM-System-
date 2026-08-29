@@ -1,0 +1,33 @@
+2026-08-28T18:19:11.152264,admin@company.com,ADD_USER,dweerakoon.test@gmail.com
+2026-08-28T18:40:13.587349,wikzpoorna@gmail.com,REMOVE_USER,admin@company.com
+2026-08-28T19:11:25.518600,wikzpoorna@gmail.com,INVITE_USER,new.engineer@company.com,Network Engineer
+2026-08-28T19:11:27.786766,admin@company.com,CONFIGURE_ROLE,Junior Auditor
+2026-08-28T19:11:28.536999,admin@company.com,INVITE_USER,auditor.test@company.com,Junior Auditor
+2026-08-28T19:12:13.967437,admin@company.com,CONFIGURE_ROLE,Junior Auditor
+2026-08-28T19:12:14.350179,admin@company.com,INVITE_USER,auditor.test@company.com,Junior Auditor
+2026-08-28T19:12:51.857666,admin@company.com,INVITE_USER,new.engineer@company.com,Network Engineer
+2026-08-28T19:12:56.311620,admin@company.com,CONFIGURE_ROLE,Junior Auditor
+2026-08-28T19:12:56.999954,admin@company.com,INVITE_USER,auditor.test@company.com,Junior Auditor
+2026-08-28T19:19:19.739065,wikzpoorna@gmail.com,INVITE_USER,wikzpoorna+1@gmail.com,Security Auditor (Least Privilege)
+2026-08-28T19:25:02.432335,admin@company.com,INVITE_USER,new.engineer@company.com,Network Engineer
+2026-08-28T19:25:05.946149,admin@company.com,CONFIGURE_ROLE,Junior Auditor
+2026-08-28T19:25:06.752652,admin@company.com,INVITE_USER,auditor.test@company.com,Junior Auditor
+2026-08-28T19:25:10.400977,admin@company.com,INVITE_USER,evaluator@gmail.com,Database Admin
+2026-08-28T19:25:11.033268,admin@company.com,INVITE_USER,evaluator+1@gmail.com,Network Engineer
+2026-08-28T19:45:21.376299,wikzpoorna@gmail.com,INVITE_USER,wikzpoorna+2@gmail.com,Security Auditor (Least Privilege)
+2026-08-28T20:31:34.881946,admin@company.com,INVITE_USER,new.engineer@company.com,Network Engineer
+2026-08-28T20:31:45.369900,admin@company.com,CONFIGURE_ROLE,Junior Auditor
+2026-08-28T20:31:52.683429,admin@company.com,INVITE_USER,auditor.test@company.com,Junior Auditor
+2026-08-28T20:32:00.291965,admin@company.com,INVITE_USER,evaluator@gmail.com,Database Admin
+2026-08-28T20:32:07.479270,admin@company.com,INVITE_USER,evaluator+1@gmail.com,Network Engineer
+2026-08-29T02:26:07.899775,wikzpoorna@gmail.com,CONFIGURE_ROLE,Database Admin
+2026-08-29T11:32:00.006588,admin@company.com,INVITE_USER,new.engineer@company.com,Network Engineer
+2026-08-29T11:32:06.731212,admin@company.com,CONFIGURE_ROLE,Junior Auditor
+2026-08-29T11:32:11.848103,admin@company.com,INVITE_USER,auditor.test@company.com,Junior Auditor
+2026-08-29T11:32:17.766748,admin@company.com,INVITE_USER,evaluator@gmail.com,Database Admin
+2026-08-29T11:32:24.095767,admin@company.com,INVITE_USER,evaluator+1@gmail.com,Network Engineer
+2026-08-29T11:41:44.355703,wikzpoorna@gmail.com,DELETE_USER,8
+2026-08-29T11:42:04.518398,wikzpoorna@gmail.com,DELETE_USER,8
+2026-08-29T12:14:48.472892,admin@company.com,ADD_USER,delete.me@test.com
+2026-08-29T12:14:48.486843,admin@company.com,DELETE_USER,delete.me@test.com
+2026-08-29T12:23:38.742298,wikzpoorna@gmail.com,DELETE_USER,wikzpoorna+1@gmail.com

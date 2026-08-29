@@ -1,0 +1,108 @@
+{
+  "permissions": {
+    "db:connect": "Connect to production and staging databases",
+    "db:query": "Execute SQL queries on connected databases",
+    "db:backup": "Initiate full database backup archives",
+    "db:delete": "Delete or drop database tables (High Risk)",
+    "net:ssh": "Establish SSH connection to network switches/routers",
+    "net:ping": "Perform ICMP network connectivity checks",
+    "net:firewall": "Inspect firewall port rules and status",
+    "net:shutdown": "Emergency router/switch shutdown (Critical Risk)",
+    "app:server": "Start and manage application server instances",
+    "app:deploy": "Deploy release packages to production cluster",
+    "app:git": "Synchronize source repository from version control",
+    "app:iam": "Modify IAM privilege policies and roles (High Risk)",
+    "app:rmrf": "Simulated filesystem root deletion attack (Critical Risk)",
+    "admin:dashboard": "Access live security dashboard and telemetry",
+    "admin:sessions": "Monitor and manage active privileged user sessions",
+    "admin:alerts": "View real-time threat alerts and anomaly logs",
+    "admin:analytics": "Inspect ML behavioral model accuracy and benchmarks",
+    "admin:onboarding": "Invite and onboard new privileged users",
+    "admin:roles": "Create, edit, and configure role permission matrices",
+    "admin:simulator": "Trigger live threat demonstration scenarios",
+    "admin:settings": "Modify system security policy and thresholds"
+  },
+  "roles": {
+    "System Admin": {
+      "name": "System Admin",
+      "description": "Full administrative control with unrestricted privileges across all systems",
+      "is_system": true,
+      "permissions": [
+        "db:connect",
+        "db:query",
+        "db:backup",
+        "db:delete",
+        "net:ssh",
+        "net:ping",
+        "net:firewall",
+        "net:shutdown",
+        "app:server",
+        "app:deploy",
+        "app:git",
+        "app:iam",
+        "app:rmrf",
+        "admin:dashboard",
+        "admin:sessions",
+        "admin:alerts",
+        "admin:analytics",
+        "admin:onboarding",
+        "admin:roles",
+        "admin:simulator",
+        "admin:settings"
+      ]
+    },
+    "Database Admin": {
+      "name": "Database Admin",
+      "description": "Manages databases, SQL operations, backups, and schema tables",
+      "is_system": true,
+      "permissions": [
+        "db:connect",
+        "db:query",
+        "db:backup",
+        "db:delete",
+        "net:ping"
+      ]
+    },
+    "Network Engineer": {
+      "name": "Network Engineer",
+      "description": "Manages network routing, SSH gateways, firewall ports, and connectivity",
+      "is_system": true,
+      "permissions": [
+        "net:ssh",
+        "net:ping",
+        "net:firewall",
+        "net:shutdown"
+      ]
+    },
+    "App Developer": {
+      "name": "App Developer",
+      "description": "Controls application lifecycle, deployment pipelines, git repository, and IAM policies",
+      "is_system": true,
+      "permissions": [
+        "app:server",
+        "app:deploy",
+        "app:git",
+        "app:iam",
+        "app:rmrf",
+        "net:ping"
+      ]
+    },
+    "Security Auditor (Least Privilege)": {
+      "name": "Security Auditor (Least Privilege)",
+      "description": "Read-only auditor with least privileges to view security telemetry and connectivity",
+      "is_system": false,
+      "permissions": [
+        "admin:alerts",
+        "net:ping"
+      ]
+    },
+    "Junior Auditor": {
+      "name": "Junior Auditor",
+      "description": "Least privilege network observer",
+      "is_system": false,
+      "permissions": [
+        "net:ping"
+      ]
+    }
+  }
+}
