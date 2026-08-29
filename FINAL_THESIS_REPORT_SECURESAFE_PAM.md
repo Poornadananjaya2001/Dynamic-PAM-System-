@@ -1,6 +1,6 @@
 # Reducing Security Risks with Privileged Access Management: Real-Time Authentication and User Behavior Analysis using ML
 
-**Author:** Poorna Wickramasinghe – CB011557  
+**Author:** Poorna Wickramasinghe – 11312  
 **Degree:** Bachelor of Science in Computer Networks & Cyber Security (Hons)  
 **Faculty:** Kiu University Sri Lanka  
 **Supervisor:** Mr. Mevan Jayathilaka
