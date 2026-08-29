@@ -1,10 +1,10 @@
 # Reducing Security Risks with Privileged Access Management: Real-Time Authentication and User Behavior Analysis using ML
 
-**Author:** Heshan Rajith – CB011557  
-**Degree:** Bachelor of Science in Cyber Security (Hons)  
-**Faculty:** Computing School, Staffordshire University  
-**Supervisor:** Ms. Ama Jayaweera  
-**Date:** August 2025, Colombo  
+**Author:** Poorna Wickramasinghe – CB011557  
+**Degree:** Bachelor of Science in Computer Networks & Cyber Security (Hons)  
+**Faculty:** Kiu University Sri Lanka  
+**Supervisor:** Mr. Mevan Jayathilaka
+**Date:** August 2026, Colombo  
 
 ---
 
@@ -20,7 +20,7 @@ Empirical evaluation conducted on a structured dataset of 1,555 privileged secur
 
 **Subject Descriptors:** Security and Privacy → Access Control, Computing Methodologies → Machine Learning, Software and Systems Security → Authentication.
 
-**Tool Demonstration Video Link:** `https://youtu.be/V871sijW-W0`
+
 
 ---
 
@@ -28,15 +28,15 @@ Empirical evaluation conducted on a structured dataset of 1,555 privileged secur
 
 I declare that this research work is my original contribution and has not been submitted elsewhere for any academic qualification. All sources used have been properly acknowledged and cited according to academic standards.
 
-**Signature:** *Heshan Rajith*  
-**Name:** B.M.R. Heshan Rajith Ranasinghe  
-**Date:** August 31, 2025  
+**Signature:** *Poorna Wickramasinghe*  
+**Name:** W.M.P.D Wickramasinghe  
+**Date:** August 29, 2026  
 
 This research project meets all university requirements as confirmed during supervision. I have overseen all aspects of this research project.
 
-**Signature:** *Ms. Ama Jayaweera*  
-**Name:** Ms. Ama Jayaweera (Project Supervisor)  
-**Date:** August 31, 2025  
+**Signature:** *Mr. Mevan Jayathilaka*  
+**Name:** Mr. Mevan Jayathilaka (Project Supervisor)  
+**Date:** August 29, 2026  
 
 ---
 
