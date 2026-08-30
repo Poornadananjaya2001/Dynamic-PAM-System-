@@ -14,6 +14,7 @@
 1. [Key Features](#-key-features)
 2. [System Architecture](#-system-architecture)
 3. [Quick Start Guide (Zero-Knowledge Setup)](#-quick-start-guide-zero-knowledge-setup)
+   - [Step 5: Configure Google OAuth 2.0](#step-5-configure-google-oauth-20-required-for-google-sign-in)
 4. [Default Credentials & Demo Accounts](#-default-credentials--demo-accounts)
 5. [User Guide & Feature Walkthrough](#-user-guide--feature-walkthrough)
    - [1. Authentication & Login](#1-authentication--login)
@@ -107,9 +108,10 @@
 
 ## 🚀 Quick Start Guide (Zero-Knowledge Setup)
 
-Follow these simple steps to run the complete project on any Windows, macOS, or Linux computer.
+Follow these steps to deploy and run the complete PAM system on any Windows, macOS, or Linux computer.
 
 ### Step 1: Prerequisites
+
 Ensure you have **Python 3.9 or newer** and **Git** installed:
 - [Download Python](https://www.python.org/downloads/) *(Check the box: "Add Python to PATH" during installation on Windows)*
 - [Download Git](https://git-scm.com/downloads)
@@ -140,17 +142,97 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Step 5: Start the PAM Server
+> **Common Error:** If you see `ModuleNotFoundError: No module named 'dotenv'`, run `pip install python-dotenv` then re-run `pip install -r requirements.txt` to install all remaining dependencies.
+
+### Step 5: Configure Google OAuth 2.0 (Required for Google Sign-In)
+
+The PAM system supports Google OAuth 2.0 Single Sign-On. To enable it, you must create OAuth credentials in Google Cloud Console and configure the `.env` file.
+
+#### 5.1 — Create a Google Cloud OAuth Client
+
+1. Go to the **[Google Cloud Console](https://console.cloud.google.com/)** and sign in.
+2. Create a new project (or select an existing one).
+3. Navigate to **[APIs & Services → Credentials](https://console.cloud.google.com/apis/credentials)**.
+4. Click **"+ CREATE CREDENTIALS"** → **"OAuth client ID"**.
+5. If prompted, configure the **[OAuth Consent Screen](https://console.cloud.google.com/apis/credentials/consent)** first:
+   - **User Type**: Select `External` (or `Internal` if using Google Workspace).
+   - **App name**: `SecureSafe PAM` (or any name you prefer).
+   - **User support email**: Your email address.
+   - **Developer contact email**: Your email address.
+   - Click **Save and Continue** through the remaining steps.
+6. Return to **Credentials** → **"+ CREATE CREDENTIALS"** → **"OAuth client ID"**.
+7. **Application type**: Select **Web application**.
+8. **Name**: `Dynamic PAM System` (or any name).
+9. Under **Authorized JavaScript origins**, add:
+   ```
+   http://127.0.0.1:5000
+   http://localhost:5000
+   ```
+10. Under **Authorized redirect URIs**, add:
+    ```
+    http://127.0.0.1:5000/callback
+    ```
+11. Click **Create**.
+12. Copy the **Client ID** and **Client Secret** from the confirmation dialog.
+
+> ⚠️ **Important**: After creating the OAuth client, **wait 5 minutes** before attempting to log in. Google may take a few minutes to propagate new credentials.
+
+#### 5.2 — Configure the `.env` File
+
+Create or edit the `.env` file in the project root directory with your actual credentials:
+
+```env
+GOOGLE_CLIENT_ID=your-client-id-here.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=GOCSPX-your-client-secret-here
+```
+
+**Example:**
+```env
+GOOGLE_CLIENT_ID=310911210724-abcdefghijk.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=GOCSPX-AbCdEfGhIjKlMnOpQrStUvWx
+```
+
+> ⚠️ **Do NOT commit the `.env` file to Git.** It contains sensitive credentials. The `.env` file is loaded automatically by `python-dotenv` when the server starts.
+
+#### 5.3 — Skip OAuth (Optional)
+
+If you do **not** need Google Sign-In and want to test immediately, you can skip OAuth setup entirely. The system provides two alternative login methods:
+
+- **Password Login**: Use the default admin credentials (see [Default Credentials](#-default-credentials--demo-accounts)).
+- **Demo Login**: Navigate to `http://127.0.0.1:5000/demo-login` for instant one-click access.
+
+### Step 6: Start the PAM Server
 ```bash
 python app.py
 ```
 
-### Step 6: Open the Application in Your Browser
+You should see:
+```
+ML Models (IsolationForest & OneHotEncoder) loaded.
+Starting SecureSafe Dynamic PAM System on http://127.0.0.1:5000...
+ * Running on http://127.0.0.1:5000
+```
+
+### Step 7: Open the Application in Your Browser
+
 Open your browser and navigate to:
 ```
 http://127.0.0.1:5000
 ```
+
+> **Important**: Always use `http://127.0.0.1:5000` (not `http://localhost:5000`) to match the configured OAuth redirect URI.
+
 🎉 **The system is now live!**
+
+### Step 8: Login
+
+You have **three login options** at `http://127.0.0.1:5000/login`:
+
+| Method | How to Use |
+|---|---|
+| **Password Login** | Enter a registered email and password (see default credentials below) |
+| **Google OAuth 2.0** | Click "Sign in with Google" (requires Step 5 OAuth setup) |
+| **Quick Demo Access** | One-click login into any preset role — no configuration needed |
 
 ---
 
@@ -358,6 +440,27 @@ System policies and SMTP credentials can be configured directly through the **Se
 ---
 
 ## ❓ Troubleshooting & FAQ
+
+**Q: `ModuleNotFoundError: No module named 'dotenv'` when running `python app.py`.**
+- *Solution*: Install the missing package with `pip install python-dotenv`, then run `pip install -r requirements.txt` to install all dependencies.
+
+**Q: `Error 401: invalid_client` — "The OAuth client was not found."**
+- *Solution*: This means Google does not recognize the Client ID in your `.env` file. Verify that:
+  1. The `.env` file contains your **real** Client ID and Client Secret (not placeholder values).
+  2. The OAuth client has not been deleted from [Google Cloud Console](https://console.cloud.google.com/apis/credentials).
+  3. The [OAuth Consent Screen](https://console.cloud.google.com/apis/credentials/consent) has been configured.
+  4. If the OAuth client was just created, **wait 5 minutes** for Google to propagate the credentials.
+
+**Q: `Error 400: redirect_uri_mismatch` — "This app's request is invalid."**
+- *Solution*: The redirect URI sent by the app does not match what is configured in Google Cloud Console. Fix it by:
+  1. Go to [Google Cloud Console → Credentials](https://console.cloud.google.com/apis/credentials) → click your OAuth Client ID.
+  2. Under **Authorized JavaScript origins**, add both:
+     - `http://127.0.0.1:5000`
+     - `http://localhost:5000`
+  3. Under **Authorized redirect URIs**, add:
+     - `http://127.0.0.1:5000/callback`
+  4. Click **Save** and wait a few minutes for changes to take effect.
+  5. Always access the app via `http://127.0.0.1:5000` (not `localhost`).
 
 **Q: Port 5000 is already in use.**
 - *Solution*: Start on another port by running `python -c "import app; app.app.run(port=5001)"` or terminate the existing process using port 5000.
