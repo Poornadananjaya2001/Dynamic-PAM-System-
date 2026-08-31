@@ -1847,6 +1847,40 @@ def reset_session_strikes(target_session_id):
         return jsonify({"status": "Session access restored", "session_id": target_session_id})
     return jsonify({"error": "Session not found"}), 404
 
+@app.route('/api/terminate_session/<path:target_session_id>', methods=['POST'])
+def terminate_session(target_session_id):
+    """Admin API to forcefully terminate and revoke a session"""
+    session_id = session.get('user', {}).get('session_id')
+    if not session_id or session_id not in active_sessions:
+        return jsonify({"error": "Not authenticated"}), 401
+
+    target_sid = None
+    if target_session_id in active_sessions:
+        target_sid = target_session_id
+    else:
+        # Search by email if email was passed
+        for s_id, s_data in list(active_sessions.items()):
+            if s_data.get('email', '').strip().lower() == target_session_id.strip().lower():
+                target_sid = s_id
+                break
+
+    if target_sid and target_sid in active_sessions:
+        active_sessions[target_sid]['strike_count'] = 3
+        active_sessions[target_sid]['portal_access'] = 'revoked'
+        revocation_event = {
+            'id': time.time(),
+            'action': "PORTAL_ACCESS_REVOKED",
+            'riskScore': 100,
+            'user': {'role': active_sessions[target_sid].get('role', 'Unknown'), 'email': active_sessions[target_sid].get('email', '')},
+            'session_id': target_sid,
+            'details': {'reason': "Administrative Manual Termination"}
+        }
+        all_events_storage.append(revocation_event)
+        alerts_storage.append(revocation_event)
+        return jsonify({"status": "Session terminated and access revoked", "session_id": target_sid})
+    
+    return jsonify({"error": "Session not found"}), 404
+
 @app.route('/api/simulate_event', methods=['POST'])
 def simulate_event():
     """Simulate threat scenarios directly for live demonstration (Slide 33)"""

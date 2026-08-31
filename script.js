@@ -339,7 +339,7 @@ const App = {
                                                     <i class="fas fa-undo"></i> Restore Access
                                                 </button>
                                             ` : `
-                                                <button onclick="App.revokeSessionDirect('${s.email}')" class="px-3 py-1.5 bg-red-600/80 hover:bg-red-600 text-white rounded-lg font-semibold text-xs transition flex items-center gap-1.5 ml-auto">
+                                                <button onclick="App.terminateSession('${s.session_id}')" class="px-3 py-1.5 bg-red-600/80 hover:bg-red-600 text-white rounded-lg font-semibold text-xs transition flex items-center gap-1.5 ml-auto">
                                                     <i class="fas fa-ban"></i> Terminate
                                                 </button>
                                             `}
@@ -1121,6 +1121,26 @@ const App = {
         } catch (e) {
             alert('Error restoring session');
         }
+    },
+
+    terminateSession: async function(sessionId) {
+        if (!confirm('Are you sure you want to terminate this active privileged session?')) return;
+        try {
+            const res = await fetch(`/api/terminate_session/${sessionId}`, { method: 'POST' });
+            if (res.ok) {
+                alert('Session terminated and privileged access revoked!');
+                this.fetchDashboardData();
+            } else {
+                const err = await res.json();
+                alert(err.error || 'Failed to terminate session');
+            }
+        } catch (e) {
+            alert('Error terminating session: ' + (e.message || e));
+        }
+    },
+
+    revokeSessionDirect: async function(sessionIdOrEmail) {
+        return this.terminateSession(sessionIdOrEmail);
     },
 
     runThreatSimulation: async function(scenarioId, action, payload) {
