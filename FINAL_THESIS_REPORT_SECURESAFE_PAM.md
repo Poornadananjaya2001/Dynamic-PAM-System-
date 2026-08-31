@@ -1,26 +1,41 @@
 # Reducing Security Risks with Privileged Access Management: Real-Time Authentication and User Behavior Analysis using ML
 
-**Author:** Poorna Wickramasinghe – 11312  
-**Degree:** Bachelor of Science in Computer Networks & Cyber Security (Hons)  
-**Faculty:** Faculty Of Computer Science & Engineering  
-**Supervisor:** Mr. Mevan Jayathilaka
-**Date:** August 2026, Colombo  
+<div align="center">
+
+### KIU
+**Faculty of Computer Science & Computer Engineering**  
+**Department of Computer Science**  
+
+**BSc Hons in Computer Networks & Cyber Security**  
+
+#### Final Year Individual Project
+
+**Subject Code:** COM4901  
+
+---
+
+### **Title:** Reducing Security Risks with Privileged Access Management: Real-Time Authentication and User Behavior Analysis using ML
+
+**Index No:** 11312  
+**Student Name:** W.M.P.D.Wickramasinghe  
+**Batch:** 08  
+**Deadline of the Assignment:** 31/08/2026  
+
+</div>
 
 ---
 
 ## Abstract
 
-Traditional Privileged Access Management (PAM) systems rely on static, rule-based configurations that are inadequate against modern cybersecurity threats. This research addresses this critical gap by designing, implementing, and empirically evaluating a dynamic PAM system that integrates real-time OAuth 2.0 authentication with machine learning-based User Behavior Analysis (UBA) to detect anomalies and automate threat responses in real time. 
+Traditional Privileged Access Management (PAM) systems rely on static, rule-based configurations that are inadequate against modern cybersecurity threats. This research addresses this critical gap by designing, implementing, and empirically evaluating a dynamic PAM system that integrates real-time OAuth 2.0 authentication with machine learning-based User Behavior Analysis (UBA) to detect anomalies and automate threat responses in real time.
 
-The technical solution employs an unsupervised Isolation Forest algorithm combined with contextual risk heuristics to establish dynamic behavioral baselines for privileged administrative identities without requiring pre-labeled attack data. The system architecture implements a 4-tier component-based design featuring OAuth 2.0 authorization code flow for delegated credential validation, a Flask-based RESTful API gateway, a real-time behavioral analysis engine, an automated 3-strike privilege controller, an automated SMTP user onboarding subsystem, and a 9-sheet executive Excel reporting generator. 
+The technical solution employs an unsupervised Isolation Forest algorithm combined with contextual risk heuristics to establish dynamic behavioral baselines for privileged administrative identities without requiring pre-labeled attack data. The system architecture implements a 4-tier component-based design featuring OAuth 2.0 authorization code flow for delegated credential validation, a Flask-based RESTful API gateway, a real-time behavioral analysis engine, an automated 3-strike privilege controller, an automated SMTP user onboarding subsystem, and a 9-sheet executive Excel reporting generator.
 
 Empirical evaluation conducted on a structured dataset of 1,555 privileged security events demonstrated an overall classification accuracy of 87.3% with a weighted F1-score of 0.874, achieving an exceptional 96.4% accuracy on legitimate normal operations (minimizing operational disruption) and an 83.5% detection rate on critical security threats with an area under the multi-class ROC curve (AUC) of 0.985. The automated response engine demonstrated sub-second decision latency (0.5s response action time, 2.5s end-to-end processing pipeline time), successfully enforcing immediate session termination and OAuth token revocation when critical thresholds are crossed. An empirical requirements validation survey involving 115 cybersecurity professionals confirmed overwhelming industry demand for real-time anomaly detection (53.0%) and automated threat remediation (51.3%), while highlighting false positive minimization as the paramount adoption barrier (49.6%). The developed prototype bridges the gap between theoretical academic machine learning research and production-oriented access control architectures.
 
 **Keywords:** Privileged Access Management, Machine Learning, User Behavior Analysis, OAuth 2.0, Cybersecurity, Anomaly Detection, Isolation Forest, Role-Based Access Control.
 
 **Subject Descriptors:** Security and Privacy → Access Control, Computing Methodologies → Machine Learning, Software and Systems Security → Authentication.
-
-
 
 ---
 
@@ -34,9 +49,9 @@ I declare that this research work is my original contribution and has not been s
 
 This research project meets all university requirements as confirmed during supervision. I have overseen all aspects of this research project.
 
-**Signature:** *Mr. Mevan Jayathilaka*  
+**Signature:** *Mevan Jayathilaka*  
 **Name:** Mr. Mevan Jayathilaka (Project Supervisor)  
-**Date:** August 29, 2026  
+**Date:** August 30, 2026  
 
 ---
 
@@ -80,14 +95,135 @@ I also extend my sincere appreciation to the **115 IT and cybersecurity professi
   - [1.11 Research Objectives](#111-research-objectives)
   - [1.12 Chapter Summary](#112-chapter-summary)
 - [Chapter 2: Literature Review](#chapter-2-literature-review)
+  - [2.1 Chapter Overview](#21-chapter-overview)
+  - [2.2 Concept Map](#22-concept-map)
+  - [2.3 Problem Domain Analysis](#23-problem-domain-analysis)
+    - [2.3.1 Current Cyber Threats in Sri Lanka](#231-current-cyber-threats-in-sri-lanka)
+    - [2.3.2 Privileged Access Misuse as a Cybercrime Trend](#232-privileged-access-misuse-as-a-cybercrime-trend)
+    - [2.3.3 Security Investigation Challenges in Sri Lanka](#233-security-investigation-challenges-in-sri-lanka)
+  - [2.4 Review of Existing Systems](#24-review-of-existing-systems)
+    - [2.4.1 Review of Commercial and Academic Approaches](#241-review-of-commercial-and-academic-approaches)
+    - [2.4.2 Comparative Analysis Review](#242-comparative-analysis-review)
+  - [2.5 Technological Review](#25-technological-review)
+    - [2.5.1 OAuth 2.0 Authorization Framework (RFC 6749)](#251-oauth-20-authorization-framework-rfc-6749)
+    - [2.5.2 Machine Learning for User Behavior Analysis (UBA / UEBA)](#252-machine-learning-for-user-behavior-analysis-uba--ueba)
+  - [2.6 Evaluation Criteria and Benchmarking Standards](#26-evaluation-criteria-and-benchmarking-standards)
+    - [2.6.1 Evaluation Criteria for Dynamic PAM](#261-evaluation-criteria-for-dynamic-pam)
+    - [2.6.2 Benchmarking Methodology](#262-benchmarking-methodology)
+  - [2.7 Chapter Summary](#27-chapter-summary)
 - [Chapter 3: Methodology](#chapter-3-methodology)
-- [Chapter 4: Software Requirements Specification](#chapter-4-software-requirements-specification)
-- [Chapter 5: Design](#chapter-5-design)
+  - [3.1 Chapter Overview](#31-chapter-overview)
+  - [3.2 Research Methodology: Design Science Research (DSR)](#32-research-methodology-design-science-research-dsr)
+  - [3.3 Development Methodology: Iterative & Incremental Prototyping](#33-development-methodology-iterative--incremental-prototyping)
+    - [3.3.1 Requirement Elicitation Methodology](#331-requirement-elicitation-methodology)
+    - [3.3.2 Design Methodology](#332-design-methodology)
+    - [3.3.3 Programming Paradigm](#333-programming-paradigm)
+    - [3.3.4 Evaluation Methodology](#334-evaluation-methodology)
+    - [3.3.5 Solution Methodology](#335-solution-methodology)
+  - [3.4 Project Management Methodology](#34-project-management-methodology)
+    - [3.4.1 Project Scope](#341-project-scope)
+    - [3.4.2 Working Schedule & Milestones](#342-working-schedule--milestones)
+    - [3.4.3 Resource Requirements](#343-resource-requirements)
+    - [3.4.4 Risks and Mitigation Strategies](#344-risks-and-mitigation-strategies)
+  - [3.5 Chapter Summary](#35-chapter-summary)
+- [Chapter 4: Software Requirements Specification (SRS)](#chapter-4-software-requirements-specification-srs)
+  - [4.1 Chapter Overview](#41-chapter-overview)
+  - [4.2 Rich Picture](#42-rich-picture)
+  - [4.3 Stakeholder Analysis](#43-stakeholder-analysis)
+    - [4.3.1 Stakeholder Description](#431-stakeholder-description)
+    - [4.3.2 Stakeholder Onion Model](#432-stakeholder-onion-model)
+  - [4.4 Requirement Elicitation Methods](#44-requirement-elicitation-methods)
+  - [4.5 Discussion of Results](#45-discussion-of-results)
+    - [4.5.1 Literature Review Findings](#451-literature-review-findings)
+    - [4.5.2 Comprehensive Analysis of Industry Survey Findings (N=115)](#452-comprehensive-analysis-of-industry-survey-findings-n115)
+  - [4.6 Triangulated Summary Findings Matrix](#46-triangulated-summary-findings-matrix)
+  - [4.7 Context Diagram (Level 0)](#47-context-diagram-level-0)
+  - [4.8 Use Case Diagram and Detailed Descriptions](#48-use-case-diagram-and-detailed-descriptions)
+  - [4.9 Requirements Specification](#49-requirements-specification)
+    - [4.9.1 Prioritization Methodology (MoSCoW)](#491-prioritization-methodology-moscow)
+    - [4.9.2 Functional Requirements](#492-functional-requirements)
+    - [4.9.3 Non-Functional Requirements](#493-non-functional-requirements)
+  - [4.10 Chapter Summary](#410-chapter-summary)
+- [Chapter 5: System Design](#chapter-5-system-design)
+  - [5.1 Chapter Overview](#51-chapter-overview)
+  - [5.2 Architectural Design Goals](#52-architectural-design-goals)
+  - [5.3 4-Tier Layered System Architecture](#53-4-tier-layered-system-architecture)
+    - [5.3.1 Layer Responsibilities](#531-layer-responsibilities)
+  - [5.4 Detailed System Design](#54-detailed-system-design)
+    - [5.4.1 Choice of Design Paradigm: OOAD Justification](#541-choice-of-design-paradigm-ooad-justification)
+    - [5.4.2 Component Diagram](#542-component-diagram)
+    - [5.4.3 Class Diagram](#543-class-diagram)
+    - [5.4.4 Core Algorithmic Designs](#544-core-algorithmic-designs)
+    - [5.4.5 UI Design Wireframes](#545-ui-design-wireframes)
+    - [5.4.6 System Process Workflows](#546-system-process-workflows)
+  - [5.5 Chapter Summary](#55-chapter-summary)
 - [Chapter 6: Implementation](#chapter-6-implementation)
+  - [6.1 Chapter Overview](#61-chapter-overview)
+  - [6.2 Technology Selection](#62-technology-selection)
+    - [6.2.1 Technology Stack Architecture](#621-technology-stack-architecture)
+    - [6.2.2 Data Selection: Synthetic Dataset Generation Rationale](#622-data-selection-synthetic-dataset-generation-rationale)
+    - [6.2.3 Programming Language: Python 3.9+](#623-programming-language-python-39)
+    - [6.2.4 Library Selection & Justifications](#624-library-selection--justifications)
+    - [6.2.5 Frontend Framework: Vanilla JavaScript (ES6+) with TailwindCSS](#625-frontend-framework-vanilla-javascript-es6-with-tailwindcss)
+    - [6.2.6 Summary of Technology Selection](#626-summary-of-technology-selection)
+  - [6.3 Implementation of Core Functionalities](#63-implementation-of-core-functionalities)
+    - [6.3.1 OAuth 2.0 Authentication Module](#631-oauth-20-authentication-module)
+    - [6.3.2 Machine Learning Behavior Analysis Engine](#632-machine-learning-behavior-analysis-engine)
+    - [6.3.3 Dynamic Privilege Controller & 3-Strike Revocation Middleware](#633-dynamic-privilege-controller--3-strike-revocation-middleware)
+    - [6.3.4 Real-Time Log Processing System](#634-real-time-log-processing-system)
+    - [6.3.5 Automated User Onboarding & SMTP Email Engine](#635-automated-user-onboarding--smtp-email-engine)
+    - [6.3.6 Multi-Role RBAC Management (21 Permissions)](#636-multi-role-rbac-management-21-permissions)
+    - [6.3.7 9-Sheet Executive Excel Report Generator](#637-9-sheet-executive-excel-report-generator)
+  - [6.4 User Interface Implementation](#64-user-interface-implementation)
+    - [6.4.1 Real-Time Admin Dashboard Interface](#641-real-time-admin-dashboard-interface)
+    - [6.4.2 Role-Based User Portal Interface (/portal)](#642-role-based-user-portal-interface-portal)
+    - [6.4.3 Threat Simulator Interface (6 Live Scenarios)](#643-threat-simulator-interface-6-live-scenarios)
+  - [6.5 Chapter Summary](#65-chapter-summary)
 - [Chapter 7: Testing](#chapter-7-testing)
+  - [7.1 Chapter Overview](#71-chapter-overview)
+  - [7.2 Objectives and Goals of Testing](#72-objectives-and-goals-of-testing)
+    - [7.2.1 Primary Objectives](#721-primary-objectives)
+    - [7.2.2 Specific Benchmark Goals](#722-specific-benchmark-goals)
+  - [7.3 Testing Criteria & Test Environment Setup](#73-testing-criteria--test-environment-setup)
+    - [7.3.1 Acceptance Criteria](#731-acceptance-criteria)
+    - [7.3.2 Test Environment Setup](#732-test-environment-setup)
+  - [7.4 Machine Learning Model Testing and Statistical Evaluation](#74-machine-learning-model-testing-and-statistical-evaluation)
+    - [7.4.1 Dataset Characteristics (1,555 Benchmark Events)](#741-dataset-characteristics-1555-benchmark-events)
+    - [7.4.2 Confusion Matrix Analysis](#742-confusion-matrix-analysis)
+    - [7.4.3 Classification Performance Analysis](#743-classification-performance-analysis)
+    - [7.4.4 Key Statistical Findings](#744-key-statistical-findings)
+    - [7.4.5 Multi-Class Receiver Operating Characteristic (ROC) Analysis](#745-multi-class-receiver-operating-characteristic-roc-analysis)
+  - [7.5 Functional Testing](#75-functional-testing)
+    - [7.5.1 Authentication Flow Testing (47/47 Passed)](#751-authentication-flow-testing-4747-passed)
+    - [7.5.2 Access Control & Privilege Escalation Defense](#752-access-control--privilege-escalation-defense)
+    - [7.5.3 Real-Time Threat Simulator & Automated Revocation](#753-real-time-threat-simulator--automated-revocation)
+  - [7.6 Module & Integration Testing](#76-module--integration-testing)
+  - [7.7 Non-Functional & Performance Testing](#77-non-functional--performance-testing)
+    - [7.7.1 Real-Time Accuracy Dashboard](#771-real-time-accuracy-dashboard)
+    - [7.7.2 Response Time Analysis Benchmarking](#772-response-time-analysis-benchmarking)
+    - [7.7.3 Scalability & Load Testing](#773-scalability--load-testing)
+  - [7.8 Limitations of the Testing Process](#78-limitations-of-the-testing-process)
+  - [7.9 Chapter Summary](#79-chapter-summary)
 - [Chapter 8: Conclusion](#chapter-8-conclusion)
+  - [8.1 Chapter Overview](#81-chapter-overview)
+  - [8.2 Achievement of Research Aims and Objectives](#82-achievement-of-research-aims-and-objectives)
+    - [8.2.1 Primary Research Aim Evaluation](#821-primary-research-aim-evaluation)
+    - [8.2.2 Primary Objective Evaluation](#822-primary-objective-evaluation)
+    - [8.2.3 Detailed Specific Objectives Assessment](#823-detailed-specific-objectives-assessment)
+  - [8.3 Utilization of Course Knowledge](#83-utilization-of-course-knowledge)
+  - [8.4 Application of Existing Skills](#84-application-of-existing-skills)
+  - [8.5 Acquisition of New Technical Competencies](#85-acquisition-of-new-technical-competencies)
+  - [8.6 Achievement of Program Learning Outcomes (LO1–LO6)](#86-achievement-of-program-learning-outcomes-lo1lo6)
+  - [8.7 Problems Encountered, Solutions, and Lessons Learned](#87-problems-encountered-solutions-and-lessons-learned)
+  - [8.8 Justified Deviations from Initial Proposal](#88-justified-deviations-from-initial-proposal)
+  - [8.9 Research Limitations](#89-research-limitations)
+  - [8.10 Future Research Enhancements](#810-future-research-enhancements)
+  - [8.11 Achievement of Contributions to Knowledge](#811-achievement-of-contributions-to-knowledge)
+  - [8.12 Concluding Remarks](#812-concluding-remarks)
 - [References](#references)
 - [Appendix](#appendix)
+  - [Appendix A: Industry Requirements Validation Survey Questionnaire](#appendix-a-industry-requirements-validation-survey-questionnaire)
+  - [Appendix B: Survey Statistical Results Summary](#appendix-b-survey-statistical-results-summary)
 
 ---
 
@@ -117,25 +253,23 @@ I also extend my sincere appreciation to the **115 IT and cybersecurity professi
 - **Figure 22** - Real-Time Behavior Analysis Workflow
 - **Figure 23** - System Configuration Workflow
 - **Figure 24** - Technology Stack Architecture
-- **Figure 25** - Real Activity Log Sample
-- **Figure 26** - Confusion Matrix Visualization (Heatmap)
-- **Figure 27** - Classification Report
-- **Figure 28** - ROC Curves for Multi-Class Classification
-- **Figure 29** - Google OAuth Login Flow
-- **Figure 30** - Successful Authentication & User Welcome Screen
-- **Figure 31** - Authentication Test Results Console
-- **Figure 32** - Role-Based Interface - Database Admin
-- **Figure 33** - Role-Based Interface - Network Engineer
-- **Figure 34** - Access Denied & Revocation Screenshot
-- **Figure 35** - Privilege Escalation Test Results (Developer Tools)
-- **Figure 36** - Live Dashboard with Risk Scoring
-- **Figure 37** - Alert Generation Example
-- **Figure 38** - Unit Test Execution Results (Coverage Suite)
-- **Figure 39** - API Response Testing & Network Latency
-- **Figure 40** - Model Accuracy Dashboard
-- **Figure 41** - Response Time Analysis Chart (Latency Benchmarks)
-- **Figure 42** - Settings Page Interface
-- **Figure 43** - Error Handling Examples
+- **Figure 25** - SecureSafe PAM Password Authentication Interface
+- **Figure 26** - SecureSafe PAM Google OAuth Authentication Interface
+- **Figure 27** - User Onboarding & Invite Dispatcher
+- **Figure 28** - Temporary Credentials Onboarding Email
+- **Figure 29** - Password Reset Verification Email
+- **Figure 30** - Role & Permission Management (RBAC)
+- **Figure 31** - Privileged User Administration
+- **Figure 32** - Live Security Overview Dashboard
+- **Figure 33** - Privileged Session Management
+- **Figure 34** - Real-Time Threat & Security Alerts
+- **Figure 35** - Model Accuracy & Research Performance Metrics
+- **Figure 36** - System Policy & Configuration Engine
+- **Figure 37** - Live Threat & Anomaly Demonstration Simulator
+- **Figure 38** - PAM Risk Classification Confusion Matrix
+- **Figure 39** - Detailed Classification Report
+- **Figure 40** - Multi-Class ROC Curves
+- **Figure 41** - Response Time Analysis
 
 ---
 
@@ -242,22 +376,22 @@ This research addresses these profound security vulnerabilities through the conc
 ### 1.3.1 Current Cybersecurity Threat Landscape
 The global cybersecurity landscape is characterized by an alarming escalation in the volume, sophistication, and destructive potential of cyberattacks targeting enterprise infrastructure. According to Verizon's 2023 Data Breach Investigations Report, over 82% of all analyzed organizational breaches involved the human element, with stolen credentials, social engineering, and privileged access misuse representing the dominant initial attack vectors. Threat actors have shifted focus from brute-force perimeter penetration toward acquiring legitimate administrative credentials through targeted phishing, credential stuffing, session token hijacking, and advanced persistent threat (APT) campaigns (Wang, Chen and Zhang, 2021).
 
-When an attacker acquires valid administrative credentials, traditional intrusion detection systems (IDS) and signature-based antivirus tools are effectively neutralized, as the adversary's actions appear indistinguishable from legitimate administrative duties. According to IBM Security's 2023 Cost of a Data Breach Report, the global average cost of a data breach reached a record \$4.45 million, with breaches involving compromised privileged credentials exhibiting both the longest dwell times (averaging 327 days to identify and contain) and the highest financial devastation due to the adversary's unfettered lateral movement capabilities.
+When an attacker acquires valid administrative credentials, traditional intrusion detection systems (IDS) and signature-based antivirus tools are effectively neutralized, as the adversary's actions appear indistinguishable from legitimate administrative duties. According to IBM Security's 2023 Cost of a Data Breach Report, the global average cost of a data breach reached a record $4.45 million, with breaches involving compromised privileged credentials exhibiting both the longest dwell times (averaging 327 days to identify and contain) and the highest financial devastation due to the adversary's unfettered lateral movement capabilities.
 
 ### 1.3.2 Limitations of Traditional PAM Systems
-While commercial PAM solutions from industry leaders such as CyberArk, BeyondTrust, and Delinea provide robust password vaulting, session proxying, and recording capabilities, they remain fundamentally constrained by static architectural philosophies (Jensen, Smith and Alvarez, 2020). These systems enforce binary, policy-based access rules: an administrator is either granted or denied access based on predefined role mappings. 
+While commercial PAM solutions from industry leaders such as CyberArk, BeyondTrust, and Delinea provide robust password vaulting, session proxying, and recording capabilities, they remain fundamentally constrained by static architectural philosophies (Jensen, Smith and Alvarez, 2020). These systems enforce binary, policy-based access rules: an administrator is either granted or denied access based on predefined role mappings.
 
 Crucially, conventional PAM platforms treat authentication as a discrete, one-time checkpoint rather than an ongoing, continuous validation process. Once an administrative session is established, traditional tools lack the contextual intelligence to evaluate behavioral anomalies in real time—such as an administrator executing destructive database drop commands at 3:00 AM from a foreign, non-local IP address. Furthermore, when anomalies are detected, existing commercial platforms predominantly rely on passive alerting mechanisms that generate notifications for Security Operations Center (SOC) analysts. In fast-moving cyberattacks, human-in-the-loop triage delays of minutes or hours prove catastrophic, allowing malicious actors sufficient time to complete data destruction or exfiltration before an analyst can manually terminate the session (ManageEngine, 2023).
 
 ### 1.3.3 Sri Lankan Cybersecurity Context
-The critical necessity for dynamic, automated PAM solutions is starkly exemplified by recent high-impact cyber incidents in developing economies, notably within Sri Lanka. In August 2023, the **Lanka Government Cloud (LGC)** suffered a catastrophic ransomware and data destruction attack that resulted in the complete, irrecoverable deletion of official government data across dozens of state departments and the collapse of hundreds of `.gov.lk` web services and government email communications (Chandrasiri, 2023). 
+The critical necessity for dynamic, automated PAM solutions is starkly exemplified by recent high-impact cyber incidents in developing economies, notably within Sri Lanka. In August 2023, the Lanka Government Cloud (LGC) suffered a catastrophic ransomware and data destruction attack that resulted in the complete, irrecoverable deletion of official government data across dozens of state departments and the collapse of hundreds of .gov.lk web services and government email communications (Chandrasiri, 2023).
 
-Forensic assessments conducted by the Sri Lanka Computer Emergency Readiness Team (Sri Lanka CERT|CC, 2023) highlighted that the attackers achieved widespread destruction by leveraging compromised administrative credentials within the virtualization and storage management layer. Because the underlying infrastructure lacked real-time behavioral anomaly detection and automated session revocation controls, the threat actor operated with impunity, deleting production databases, virtual machine snapshots, and local backup arrays over several hours without triggering automated defensive countermeasures. 
+Forensic assessments conducted by the Sri Lanka Computer Emergency Readiness Team (Sri Lanka CERT|CC, 2023) highlighted that the attackers achieved widespread destruction by leveraging compromised administrative credentials within the virtualization and storage management layer. Because the underlying infrastructure lacked real-time behavioral anomaly detection and automated session revocation controls, the threat actor operated with impunity, deleting production databases, virtual machine snapshots, and local backup arrays over several hours without triggering automated defensive countermeasures.
 
 Furthermore, developing digital economies face acute cybersecurity challenges characterized by a severe shortage of certified Digital Forensics and Incident Response (DFIR) professionals, constrained IT budgets across Small and Medium-sized Enterprises (SMEs), and widespread reliance on insecure credential management practices such as shared spreadsheets or unmanaged password vaults (Thilina, Oruthota and Weerasinghe, 2021). Sri Lanka CERT reported a 40% year-over-year surge in cybersecurity incidents, emphasizing that local organizations urgently require accessible, lightweight, and autonomous PAM platforms that provide enterprise-grade protection without requiring massive SOC teams.
 
 ## 1.4 Problem Definition
-Traditional Privileged Access Management platforms are statically architected, relying on initial authentication checkpoints and predetermined role mappings that fail to protect enterprise environments against compromised administrative accounts, insider threats, and novel attack vectors executing within authenticated sessions. 
+Traditional Privileged Access Management platforms are statically architected, relying on initial authentication checkpoints and predetermined role mappings that fail to protect enterprise environments against compromised administrative accounts, insider threats, and novel attack vectors executing within authenticated sessions.
 
 Conventional systems operate under the flawed assumption that an authenticated identity remains permanently trusted throughout the entire duration of a session. They lack the real-time behavioral intelligence required to continuously inspect commands, evaluate operational context (such as time-of-day, IP locality, command severity, and historical baselines), and autonomously neutralize active threats. Consequently, a critical vulnerability window exists between the moment an administrative session is established and the delayed manual detection of malicious actions, during which irreparable data destruction and infrastructure compromise can occur.
 
@@ -275,7 +409,7 @@ From a software engineering and academic perspective, this project is motivated 
 While the OAuth 2.0 authorization framework (RFC 6749) has achieved universal adoption for delegated access in modern web applications, its application within enterprise PAM architectures remains severely underexplored. Traditional PAM systems continue to rely on legacy proprietary agents, password vault checkouts, or heavy RDP/SSH jump hosts. Existing academic literature focuses predominantly on OAuth 2.0 for consumer identity federation rather than exploring its capabilities for stateless token-level validation, scoped delegation, and dynamic programmatic token revocation tied to real-time risk engines.
 
 ### 1.6.2 Underutilized Machine Learning for Dynamic Privilege Control
-Although machine learning applications in intrusion detection have expanded significantly, their integration within Privileged Access Management for **active, real-time privilege adjustment** remains minimal. Academic literature frequently presents theoretical machine learning models evaluated on outdated offline network datasets (such as KDD Cup 99 or DARPA) without addressing the real-world software engineering challenges of embedding ML inference into active session controllers capable of altering user access rights on the fly. Existing commercial systems treat behavioral analytics as an optional post-event reporting tool rather than an active enforcer in the critical execution path.
+Although machine learning applications in intrusion detection have expanded significantly, their integration within Privileged Access Management for active, real-time privilege adjustment remains minimal. Academic literature frequently presents theoretical machine learning models evaluated on outdated offline network datasets (such as KDD Cup 99 or DARPA) without addressing the real-world software engineering challenges of embedding ML inference into active session controllers capable of altering user access rights on the fly. Existing commercial systems treat behavioral analytics as an optional post-event reporting tool rather than an active enforcer in the critical execution path.
 
 ### 1.6.3 Absence of Unified Intelligent Security Framework
 There is a distinct lack of comprehensive architectural blueprints that integrate multi-mode authentication (OAuth 2.0, enterprise passwords, temporary credential onboarding), granular Role-Based Access Control (RBAC), real-time log stream processing, machine learning risk inference, 3-strike escalation state machines, and executive audit reporting into a single, cohesive, open framework. Current approaches fragment these domains across isolated tools, exacerbating alert fatigue and administrative complexity.
@@ -323,11 +457,12 @@ To design, develop, and rigorously evaluate a dynamic Privileged Access Manageme
 ## 1.12 Chapter Summary
 This chapter established the complete intellectual, practical, and methodological foundation for the research. It highlighted the severe security risks posed by unmonitored privileged accounts, documented the static limitations of legacy PAM solutions, analyzed the Sri Lankan cybersecurity context, and formalized the research problem. It identified clear research gaps, articulated key contributions to knowledge, addressed critical engineering challenges, and formulated five guiding research questions. Finally, it established the research aim and eight measurable objectives that provide a structured roadmap for developing and validating the SecureSafe PAM system in subsequent chapters.
 
+---
 
 # Chapter 2: Literature Review
 
 ## 2.1 Chapter Overview
-This chapter provides a comprehensive, critical, and systematic review of the academic literature, industry standards, and commercial technologies foundational to Dynamic Privileged Access Management (PAM). It begins by introducing a visual concept map (Figure 1) delineating the interconnected dimensions of the research domain. The review rigorously examines the privileged access problem domain, analyzing current cyber threat trajectories, the mechanics of administrative credential misuse, and the acute digital forensics challenges facing incident responders, with specific empirical emphasis on the Sri Lankan cybersecurity context. 
+This chapter provides a comprehensive, critical, and systematic review of the academic literature, industry standards, and commercial technologies foundational to Dynamic Privileged Access Management (PAM). It begins by introducing a visual concept map (Figure 1) delineating the interconnected dimensions of the research domain. The review rigorously examines the privileged access problem domain, analyzing current cyber threat trajectories, the mechanics of administrative credential misuse, and the acute digital forensics challenges facing incident responders, with specific empirical emphasis on the Sri Lankan cybersecurity context.
 
 Subsequently, a critical evaluation of leading enterprise PAM platforms (CyberArk, BeyondTrust, Delinea) and academic prototypes is conducted, synthesized into an exhaustive comparative analysis matrix (Table 1) that highlights the fundamental architectural gap separating traditional static systems from dynamic, risk-driven approaches. The chapter then delivers an in-depth technological review of the two pillars underpinning the proposed solution: the OAuth 2.0 authorization framework (RFC 6749) and machine learning algorithms for User and Entity Behavior Analytics (UEBA), contrasting supervised algorithms against unsupervised anomaly detection models (Isolation Forest, Autoencoders). Finally, established evaluation criteria and industry benchmarking standards are formalized, providing the theoretical and quantitative framework necessary to validate the research artifact.
 
@@ -335,40 +470,35 @@ Subsequently, a critical evaluation of leading enterprise PAM platforms (CyberAr
 To establish a clear structural representation of the research landscape, the domain of Dynamic Privileged Access Management is synthesized into four interacting pillars: Research Gaps, Research Challenges, Technical Enablers, and Quantitative Evaluation Metrics.
 
 ```
-+----------------------------------------------------------------------------------------------------+
-|                                    DYNAMIC PAM CONCEPT MAP (Figure 1)                              |
-+----------------------------------------------------------------------------------------------------+
-|                                                                                                    |
-|   +---------------------------------------+         +------------------------------------------+   |
-|   |             RESEARCH GAPS             |         |            RESEARCH CHALLENGES           |   |
-|   | • Behavior analysis treated as add-on |         | • High-fidelity synthetic dataset creation|   |
-|   | • Static, policy-based access rules   |         | • Sub-5s end-to-end processing latency   |   |
-|   | • Lack of real-time privilege control |         | • Minimizing false positive rates (<2%)  |   |
-|   | • Delayed manual incident remediation |         | • Integrating multi-tier complex systems |   |
-|   +-------------------+-------------------+         +-------------------+----------------------+   |
-|                       |                                                 |                          |
-|                       +------------------------+------------------------+                          |
-|                                                |                                                   |
-|                                                V                                                   |
-|                        +-----------------------------------------------+                           |
-|                        |      PROPOSED DYNAMIC PAM SYSTEM ARTIFACT     |                           |
-|                        |  (Real-Time OAuth 2.0 + ML Behavior Analysis) |                           |
-|                        +-----------------------+-----------------------+                           |
-|                                                |                                                   |
-|                       +------------------------+------------------------+                          |
-|                       |                                                 |                          |
-|   +-------------------V-------------------+         +-------------------V----------------------+   |
-|   |          CORE TECHNOLOGIES            |         |            EVALUATION METRICS            |   |
-|   | • OAuth 2.0 Authorization (RFC 6749)  |         | • True Positive Rate (TPR / Sensitivity) |   |
-|   | • Unsupervised Isolation Forest (ML)  |         | • False Positive Rate (FPR / Specificity)|   |
-|   | • Multi-Factor Contextual Risk Engine |         | • Overall Classification Accuracy (%)    |   |
-|   | • Dynamic 3-Strike Escalation Control |         | • Detection-to-Revocation Latency (sec)  |   |
-|   | • Flask REST APIs + Tailwind SPA UI   |         | • Multi-Class ROC / AUC Discriminability |   |
-|   +---------------------------------------+         +------------------------------------------+   |
-|                                                                                                    |
-+----------------------------------------------------------------------------------------------------+
-Figure 1 - Concept Map of Dynamic PAM System
++------------------------------------+        +------------------------------------+
+|         RESEARCH CHALLENGES        |        |            RESEARCH GAPS           |
+| • High-fidelity synthetic data     |        | • Static policy-based access       |
+| • Sub-5s processing latency        |        | • Behavior analytics as add-on     |
+| • False-positive minimization      |        | • Delayed manual remediation       |
+| • Multi-tier integration           |        | • Limited real-time privilege ctrl |
++-----------------+------------------+        +-----------------+------------------+
+                  |                                             |
+                  +----------------------+----------------------+
+                                         |
+                                         v
+                 +-----------------------------------------------+
+                 |              SECURESAFE DYNAMIC PAM           |
+                 |  Real-Time OAuth 2.0 + ML Behavior Analysis   |
+                 +-----------------------+-----------------------+
+                                         |
+                  +----------------------+----------------------+
+                  |                                             |
+                  v                                             v
++------------------------------------+        +------------------------------------+
+|         EVALUATION METRICS         |        |          CORE TECHNOLOGIES         |
+| • TPR / Sensitivity                |        | • OAuth 2.0 (RFC 6749)             |
+| • FPR / Specificity                |        | • Isolation Forest ML              |
+| • Classification accuracy          |        | • Contextual risk scoring          |
+| • Revocation latency               |        | • Dynamic 3-strike control         |
+| • Multi-class ROC / AUC            |        | • Flask REST APIs + SPA UI         |
++------------------------------------+        +------------------------------------+
 ```
+*Figure 1 - Concept Map of Dynamic PAM System*
 
 As illustrated in Figure 1, the research is positioned directly at the intersection of modern authorization protocols and real-time machine learning inference, addressing the severe limitations of legacy systems that treat behavioral analytics as an offline, passive reporting mechanism.
 
@@ -377,12 +507,12 @@ As illustrated in Figure 1, the research is positioned directly at the intersect
 ### 2.3.1 Current Cyber Threats in Sri Lanka
 The urgent necessity for advanced, dynamic access control mechanisms in developing digital ecosystems is starkly highlighted by escalating cyber threats targeting national infrastructure in Sri Lanka (Fernando, 2024). While annual statistical reports from the Sri Lanka Computer Emergency Readiness Team (Sri Lanka CERT|CC) consistently document sharp increases in web defacements, ransomware attacks, and credential harvesting schemes, a landmark incident serves as a primary case study for privileged access vulnerabilities: the **August 2023 cyberattack on the Lanka Government Cloud (LGC)** (Chandrasiri, 2023).
 
-The Lanka Government Cloud infrastructure serves as the centralized digital hosting environment for critical state institutions, including ministerial portals, judicial records, and official government email platforms. During the 2023 incident, an adversary obtained high-privilege administrative credentials, enabling them to bypass perimeter intrusion prevention systems and access the core cloud management hypervisor. Because traditional security tools were configured with static rules that implicitly trusted authenticated administrative sessions, the adversary executed catastrophic, irreversible operations—including the complete deletion of production virtual machine volumes, customer databases, and local backup repositories spanning a three-month operational window (CERT|CC, 2023). 
+The Lanka Government Cloud infrastructure serves as the centralized digital hosting environment for critical state institutions, including ministerial portals, judicial records, and official government email platforms. During the 2023 incident, an adversary obtained high-privilege administrative credentials, enabling them to bypass perimeter intrusion prevention systems and access the core cloud management hypervisor. Because traditional security tools were configured with static rules that implicitly trusted authenticated administrative sessions, the adversary executed catastrophic, irreversible operations—including the complete deletion of production virtual machine volumes, customer databases, and local backup repositories spanning a three-month operational window (CERT|CC, 2023).
 
 This catastrophic incident demonstrated that perimeter defenses and traditional static firewalls provide zero protection once legitimate privileged credentials are compromised. The threat actor operated undetected within an authenticated administrative session because the infrastructure lacked automated User Behavior Analysis to detect anomalous destruction commands and lacked a dynamic privilege controller to revoke session tokens in real time.
 
 ### 2.3.2 Privileged Access Misuse as a Cybercrime Trend
-Privileged access misuse represents the primary catalyst enabling initial network infiltrations to escalate into catastrophic, enterprise-wide breaches. In the South Asian context, where Small and Medium-sized Enterprises (SMEs) are undergoing rapid, aggressive digital transformation without corresponding cybersecurity maturity, formal PAM governance is frequently absent (Thilina, Oruthota and Weerasinghe, 2021). 
+Privileged access misuse represents the primary catalyst enabling initial network infiltrations to escalate into catastrophic, enterprise-wide breaches. In the South Asian context, where Small and Medium-sized Enterprises (SMEs) are undergoing rapid, aggressive digital transformation without corresponding cybersecurity maturity, formal PAM governance is frequently absent (Thilina, Oruthota and Weerasinghe, 2021).
 
 In typical enterprise architectures, system administrators, database engineers, third-party contractors, and DevOps developers are routinely granted broad, persistent superuser privileges. When an attacker compromises any single privileged account—via spear-phishing, credential stuffing, or session hijacking—they inherit unrestricted lateral movement capabilities. The adversary can reconnaissance internal subnets, discover database connection strings, modify Identity and Access Management (IAM) policies, and exfiltrate confidential customer records without generating conventional firewall alarms. The persistent lack of continuous, behavioral inspection allows attackers to maintain dwell times averaging hundreds of days before detection (SANS Institute, 2023).
 
@@ -396,7 +526,6 @@ Digital Forensics and Incident Response (DFIR) teams face substantial operationa
 
 ### 2.4.1 Review of Commercial and Academic Approaches
 The commercial Privileged Access Management market is mature, featuring several well-established vendor platforms:
-
 - **CyberArk Privileged Access Manager:** Widely recognized as a market leader, CyberArk focuses primarily on enterprise credential vaulting, SSH key management, and session proxying through its Privileged Session Manager (PSM). Access control is strictly policy-based: administrators define static schedules and role assignments. While CyberArk has introduced threat analytics extensions (such as Privileged Threat Analytics), behavioral scoring operates as a separate post-event module whose response is largely limited to generating SOC alerts or executing coarse, binary session terminations after manual analyst review (CyberArk, 2024).
 - **BeyondTrust Privileged Access Management:** BeyondTrust provides a unified solution integrating endpoint privilege management, password safe vaulting, and secure remote vendor access. The platform enforces traditional static role-based access rules. While highly effective at enforcing corporate governance policies, it lacks dynamic, sub-second machine learning models capable of detecting zero-day behavioral deviations that comply with static rule definitions (BeyondTrust, 2024).
 - **Delinea (formerly ThycoticCentrify):** Delinea offers cloud-ready Secret Server vaulting and privilege elevation solutions designed for rapid enterprise deployment. Although Delinea incorporates machine learning for anomalous access request alerting, privilege enforcement remains tied to static role definitions rather than continuously adjusting access rights based on real-time operational risk scores.
@@ -405,16 +534,16 @@ The commercial Privileged Access Management market is mature, featuring several 
 ### 2.4.2 Comparative Analysis Review
 The structural and operational differences between existing solutions and the proposed SecureSafe PAM platform are synthesized in Table 1.
 
-**Table 1 - Comparative Analysis Review of Existing Systems**
+**Table 1 - Comparative Analysis Review of Existing Commercial and Academic PAM Systems**
 
 | Evaluation Feature | CyberArk PAM | BeyondTrust PAM | Delinea Secret Server | Academic Approaches | Proposed SecureSafe PAM |
 |---|---|---|---|---|---|
-| **Core Architecture & Philosophy** | Policy-Based, Vault-Centric Credential Management | Policy-Based, Session Proxy Control | Policy-Based, Cloud Ease-of-Use | Theoretical ML Proof-of-Concept Models | **Behavior-Driven, Dynamic, Adaptive, and Risk-Centric** |
-| **Authentication Mechanism** | Enterprise SSO / Proprietary MFA Jump Hosts | Proprietary MFA / Vault Password Checkout | Identity Federation / MFA Plugins | Simulated Dummy Auth / Offline Dataset Input | **Native OAuth 2.0 Authorization Code Flow + Multi-Mode Login** |
-| **Privilege Adjustment Paradigm** | Static, based on predefined role mappings | Static, based on scheduled access windows | Static, based on role policies | Static / Non-existent (Alerting only) | **Dynamic & Autonomous, driven by real-time ML risk scoring** |
-| **Behavioral Analytics Role** | Add-on Threat Analytics module (post-event) | Basic session monitoring & recording | Add-on analytics alerting capabilities | Isolated anomaly classifier on offline logs | **Core enforcer directly embedded in critical execution path** |
-| **Response to Detected Anomalies** | Generates SOC alert, optional manual session cut | Alerting, post-event session recording review | Alert notification to administrator | Passive log labeling / No active response | **Automated 3-strike escalation, instant OAuth token revocation** |
-| **Deployment & Resource Overhead** | Heavy enterprise infrastructure, complex setup | Enterprise proxy servers, agent deployment | Cloud subscription, moderate agent setup | Script-based prototype, no UI/deployment | **Lightweight Python/Flask SPA, zero-agent browser architecture** |
+| **Core Architecture & Philosophy** | Policy-Based, Vault-Centric Credential Management | Policy-Based, Session Proxy Control | Policy-Based, Cloud Ease-of-Use | Theoretical ML Proof-of-Concept Models | Behavior-Driven, Dynamic, Adaptive, and Risk-Centric |
+| **Authentication Mechanism** | Enterprise SSO / Proprietary MFA Jump Hosts | Proprietary MFA / Vault Password Checkout | Identity Federation / MFA Plugins | Simulated Dummy Auth / Offline Dataset Input | Native OAuth 2.0 Authorization Code Flow + Multi-Mode Login |
+| **Privilege Adjustment Paradigm** | Static, based on predefined role mappings | Static, based on scheduled access windows | Static, based on role policies | Static / Non-existent (Alerting only) | Dynamic & Autonomous, driven by real-time ML risk scoring |
+| **Behavioral Analytics Role** | Add-on Threat Analytics module (post-event) | Basic session monitoring & recording | Add-on analytics alerting capabilities | Isolated anomaly classifier on offline logs | Core enforcer directly embedded in critical execution path |
+| **Response to Detected Anomalies** | Generates SOC alert, optional manual session cut | Alerting, post-event session recording review | Alert notification to administrator | Passive log labeling / No active response | Automated 3-strike escalation, instant OAuth token revocation |
+| **Deployment & Resource Overhead** | Heavy enterprise infrastructure, complex setup | Enterprise proxy servers, agent deployment | Cloud subscription, moderate agent setup | Script-based prototype, no UI/deployment | Lightweight Python/Flask SPA, zero-agent browser architecture |
 
 This comparative evaluation confirms a decisive architectural gap: commercial platforms treat user behavior analysis as an auxiliary post-facto detection feature, whereas SecureSafe PAM establishes behavioral machine learning as the primary, real-time driver of autonomous access control.
 
@@ -428,9 +557,8 @@ The OAuth 2.0 authorization framework, formalized in RFC 6749, represents the in
 
 ### 2.5.2 Machine Learning for User Behavior Analysis (UBA / UEBA)
 User Behavior Analysis (UBA) applies advanced data science techniques to establish baselines of normal user activity and identify statistically significant anomalies indicating credential hijacking or insider threats (Wang, Smith and Lee, 2021; Gupta and Sharma, 2024; Ogunbodede et al., 2024). Two primary machine learning paradigms exist:
-
 - **Supervised Learning (e.g., Random Forest, Gradient Boosting):** Supervised algorithms train on labeled datasets containing known benign and malicious samples. While capable of achieving high classification accuracy on recognized attack patterns, supervised models suffer from two severe limitations in PAM environments: (1) real-world enterprise privileged logs almost never contain pre-labeled attack samples, and (2) supervised models cannot reliably detect novel, zero-day attack vectors that deviate from the training distribution (Liu, Ting and Zhou, 2008).
-- **Unsupervised Learning (e.g., Isolation Forest, Autoencoders, One-Class SVM):** Unsupervised algorithms model the intrinsic statistical distribution of normal administrative operations without requiring labeled anomaly data (Hawkins, 1980; Hodge and Austin, 2004; Veracode, 2023). 
+- **Unsupervised Learning (e.g., Isolation Forest, Autoencoders, One-Class SVM):** Unsupervised algorithms model the intrinsic statistical distribution of normal administrative operations without requiring labeled anomaly data (Hawkins, 1980; Hodge and Austin, 2004; Veracode, 2023).
 
 **The Isolation Forest Algorithm:** The Isolation Forest algorithm (Liu, Ting and Zhou, 2008) is uniquely suited for real-time PAM threat detection. Operating on the principle that anomalies are "few and different," Isolation Forest recursively partitions feature space using an ensemble of random isolation trees (*iTrees*). Because anomalous data points (such as a destructive root command executed at 2:00 AM from an external IP) reside in sparse regions of the feature space, they require significantly fewer random splits to isolate than normal clustering activities. The anomaly score $s(x, n)$ for an instance $x$ across an ensemble of $n$ trees is defined mathematically as:
 
@@ -438,8 +566,7 @@ $$s(x, n) = 2^{-rac{E(h(x))}{c(n)}}$$
 
 Where $E(h(x))$ represents the expected path length (number of edges traversed from root to leaf node) across all trees in the forest, and $c(n)$ is the average path length of unsuccessful searches in a Binary Search Tree (BST) constructed over $n$ samples:
 
-$$c(n) = 2\left(\ln(n - 1) + 0.5772156649
-ight) - rac{2(n - 1)}{n}$$
+$$c(n) = 2(\ln(n - 1) + 0.5772156649) - rac{2(n - 1)}{n}$$
 
 When $E(h(x)) 	o 0$, $s 	o 1$, indicating a definite anomaly. When $E(h(x)) 	o n - 1$, $s 	o 0$, indicating normal behavior. Isolation Forest exhibits low computational complexity ($O(n \log n)$ training, $O(t)$ inference where $t$ is tree count), making it ideal for sub-second real-time scoring in production security pipelines.
 
@@ -469,35 +596,42 @@ This chapter delineates the research strategy, software engineering lifecycle, a
 Design Science Research (DSR) is an established scientific paradigm in computer science and information systems that seeks to extend human and organizational capabilities by creating innovative artifacts that solve recognized real-world problems (Hevner et al., 2004). The DSR process model executed throughout this project comprises six iterative stages:
 
 ```
-+----------------------------------------------------------------------------------------------------+
-|                               DESIGN SCIENCE RESEARCH (DSR) PROCESS MODEL                          |
-+----------------------------------------------------------------------------------------------------+
-|                                                                                                    |
-|  [Step 1: Problem Identification & Motivation]                                                     |
-|  • Quantify limitations of static PAM systems and high-impact infrastructure breaches (e.g. LGC)   |
-|                                     │                                                              |
-|                                     V                                                              |
-|  [Step 2: Define Objectives of a Solution]                                                         |
-|  • Establish measurable targets: >85% ML accuracy, <3s response time, automated 3-strike revocation|
-|                                     │                                                              |
-|                                     V                                                              |
-|  [Step 3: Design and Development]                                                                  |
-|  • Architect 4-tier system: OAuth 2.0 engine, Isolation Forest UEBA, Flask REST APIs, Tailwind SPA |
-|                                     │                                                              |
-|                                     V                                                              |
-|  [Step 4: Demonstration]                                                                           |
-|  • Execute 6 live threat demonstration scenarios (Slide 33) proving dynamic token revocation       |
-|                                     │                                                              |
-|                                     V                                                              |
-|  [Step 5: Empirical Evaluation]                                                                    |
-|  • Evaluate 1,555 benchmark samples, confusion matrix, ROC curves (AUC=0.985), 14 coverage tests   |
-|                                     │                                                              |
-|                                     V                                                              |
-|  [Step 6: Communication]                                                                           |
-|  • Author comprehensive thesis report, open-source GitHub repository, and video demonstration      |
-|                                                                                                    |
-+----------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------+
+|                    1. PROBLEM IDENTIFICATION & MOTIVATION               |
+|         Quantify static PAM limitations and high-impact breaches        |
++------------------------------------+------------------------------------+
+                                     |
+                                     v
++-------------------------------------------------------------------------+
+|                       2. DEFINE SOLUTION OBJECTIVES                     |
+|       Set measurable targets: >85% accuracy, <3s response, revocation   |
++------------------------------------+------------------------------------+
+                                     |
+                                     v
++-------------------------------------------------------------------------+
+|                           3. DESIGN & DEVELOPMENT                       |
+|        Build OAuth 2.0 engine, Isolation Forest UEBA, Flask REST APIs   |
++------------------------------------+------------------------------------+
+                                     |
+                                     v
++-------------------------------------------------------------------------+
+|                                4. DEMONSTRATION                         |
+|         Execute six live threat scenarios to prove dynamic revocation   |
++------------------------------------+------------------------------------+
+                                     |
+                                     v
++-------------------------------------------------------------------------+
+|                             5. EMPIRICAL EVALUATION                     |
+|       Evaluate 1,555 samples, confusion matrix, ROC curves and coverage |
++------------------------------------+------------------------------------+
+                                     |
+                                     v
++-------------------------------------------------------------------------+
+|                                6. COMMUNICATION                         |
+|          Document the thesis, source repository and demonstration       |
++-------------------------------------------------------------------------+
 ```
+*Design Science Research (DSR) Process Model*
 
 ## 3.3 Development Methodology: Iterative & Incremental Prototyping
 For practical software development, an **Iterative and Incremental Prototyping** model (Pressman and Maxim, 2020) is utilized. This approach is essential for complex cybersecurity systems where non-deterministic machine learning models and multi-tier authentication pipelines require progressive refinement based on empirical feedback.
@@ -506,7 +640,7 @@ Development proceeded through four distinct, time-boxed cycles:
 - **Cycle 1: Core Authentication & RBAC Engine:** Implemented multi-mode login supporting Google OAuth 2.0 Authorization Code flow, enterprise password authentication with scrypt hashing, session tracking (`active_sessions`), and role permission enforcement across 21 granular permissions.
 - **Cycle 2: Data Telemetry Logging & ML Behavioral Modeling:** Engineered structured loggers (`auth_activity.log`, `real_activity.log`), developed synthetic data generators modeling realistic normal and attack distributions, and trained unsupervised Isolation Forest and Random Forest classifiers.
 - **Cycle 3: Integration & Dynamic 3-Strike Controller:** Connected real-time log watchers to the ML risk scoring engine, implemented the 3-strike escalation state machine, built automated OAuth token revocation middleware, and added automated SMTP onboarding email dispatchers.
-- **Cycle 4: Dashboard SPA, Excel Reporting & System Refinement:** Constructed the real-time Single Page Application (SPA) dashboard with live event streaming, built the 6-scenario threat simulator, engineered the 9-worksheet executive Excel report generator (`openpyxl`), and executed full unit/integration testing.
+- **Cycle 4: Dashboard SPA, Excel Reporting & System Refinement:** Constructed the real-time Single Page Application (SPA) dashboard with live event streaming, built the 6-scenario threat simulator, engineered the 9-worksheet executive Excel report generator (openpyxl), and executed full unit/integration testing.
 
 ### 3.3.1 Requirement Elicitation Methodology
 A triangulation of three distinct elicitation methods was employed to ensure requirements were grounded in academic theory, industry best practices, and empirical market demand:
@@ -518,7 +652,7 @@ A triangulation of three distinct elicitation methods was employed to ensure req
 The system adopts a **Component-Based Architecture (CBA)** (Sharp, Rogers and Preece, 2019), decomposing the platform into loosely coupled, highly cohesive modules communicating via standardized RESTful JSON APIs. This modularity ensures that authentication protocols, ML models, or database repositories can be independently upgraded or scaled without impacting adjacent components.
 
 ### 3.3.3 Programming Paradigm
-The system primarily utilizes an **Object-Oriented Programming (OOP)** paradigm implemented in Python 3.9+. OOP principles—encapsulation of session state, inheritance of role permissions, and polymorphism across analytical risk engines—provide a maintainable, modular codebase. Functional programming constructs (`map`, `filter`, list comprehensions) are utilized within the data processing and ML feature extraction pipelines to ensure high-performance, stateless execution.
+The system primarily utilizes an **Object-Oriented Programming (OOP)** paradigm implemented in Python 3.9+. OOP principles—encapsulation of session state, inheritance of role permissions, and polymorphism across analytical risk engines—provide a maintainable, modular codebase. Functional programming constructs (map, filter, list comprehensions) are utilized within the data processing and ML feature extraction pipelines to ensure high-performance, stateless execution.
 
 ### 3.3.4 Evaluation Methodology
 A **Quantitative Experimental Methodology** is executed within a controlled, reproducible testbed. The system's classification accuracy, per-class sensitivity, confusion matrix, ROC curves, and execution latency are measured across a standardized test dataset of 1,555 security events and compared against traditional static PAM baselines.
@@ -559,7 +693,7 @@ The project schedule spanning November 2024 through August 2025 is summarized in
 **Table 2 - Working Plan and Milestone Schedule**
 
 | Project Activity / Milestone | Nov-24 | Dec-24 | Jan-25 | Feb-25 | Mar-25 | Apr-25 | May-25 | Jun-25 | Jul-25 | Aug-25 | Aug-31 |
-|---|---|---|---|---|---|---|---|---|---|---|---|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Topic Selection & Approval** | [X] | | | | | | | | | | |
 | **Topic Research & Literature Review** | [X] | [X] | | | | | | | | | |
 | **Project Proposal Preparation & Submission** | | [X] | [X] | | | | | | | | |
@@ -568,7 +702,7 @@ The project schedule spanning November 2024 through August 2025 is summarized in
 | **Model Development (OAuth & Isolation Forest)** | | | | [X] | [X] | [X] | | | | | |
 | **Model Testing & Validation** | | | | | [X] | [X] | [X] | | | | |
 | **System Tool Development (Flask & APIs)** | | | | | | [X] | [X] | [X] | | | |
-| **User Interface Design (SPA Dashboard & Portal)**| | | | | | | [X] | [X] | [X] | | |
+| **User Interface Design (SPA Dashboard & Portal)** | | | | | | | [X] | [X] | [X] | | |
 | **Unit & Coverage Testing (14 Test Suites)** | | | | | | | | [X] | [X] | | |
 | **Integration & Performance Latency Testing** | | | | | | | | | [X] | [X] | |
 | **Final Dataset & Visualization Generation** | | | | | | | | | [X] | [X] | |
@@ -585,7 +719,7 @@ Project risks, probability assessments, and mitigation controls are documented i
 **Table 3 - Risks and Mitigation Strategies**
 
 | Risk ID | Risk Description | Likelihood | Impact | Proactive Mitigation Strategy |
-|---|---|---|---|---|
+|---|---|:---:|:---:|---|
 | **R1** | **Lack of Real Enterprise Privileged Datasets:** Organizations refuse to share confidential access logs due to privacy and security compliance policies. | High | High | **Mitigation:** Engineered a high-fidelity synthetic log generation pipeline modeling statistical distributions of normal administrative duties and MITRE ATT&CK privileged attack patterns. |
 | **R2** | **High False Positive Rate in ML Anomaly Detection:** Behavioral models flag legitimate administrative actions, causing severe operational disruption. | Medium | High | **Mitigation:** Implemented a multi-factor scoring architecture combining unsupervised Isolation Forest inference with domain risk heuristics and configurable policy thresholds. |
 | **R3** | **System Integration & Latency Bottlenecks:** Real-time logging, ML inference, and token revocation fail to meet the sub-5-second processing SLA. | Medium | Medium | **Mitigation:** Adopted lightweight in-memory model serialization (`joblib`), streamlined RESTful JSON payloads, and utilized optimized non-blocking log processing. |
@@ -595,11 +729,12 @@ Project risks, probability assessments, and mitigation controls are documented i
 ## 3.5 Chapter Summary
 This chapter detailed the comprehensive methodological foundation of the research project. It articulated the formal adoption of Design Science Research (DSR), structured the software engineering process within an Iterative and Incremental Prototyping lifecycle, justified the component-based architecture and OOP paradigms, established the quantitative experimental evaluation framework, and outlined the Agile project management plan, schedule, resource allocations, and risk mitigations.
 
+---
 
 # Chapter 4: Software Requirements Specification (SRS)
 
 ## 4.1 Chapter Overview
-This chapter establishes the formal Software Requirements Specification (SRS) for the Dynamic Privileged Access Management (PAM) system, translating academic research aims and industry elicitation findings into structured, verifiable software requirements. The chapter commences with a Rich Picture (Figure 2) capturing the operational complexity and threat dynamics of the problem domain. A comprehensive stakeholder analysis is presented, identifying primary system actors and mapping their organizational relationships using the Stakeholder Onion Model (Figure 3). 
+This chapter establishes the formal Software Requirements Specification (SRS) for the Dynamic Privileged Access Management (PAM) system, translating academic research aims and industry elicitation findings into structured, verifiable software requirements. The chapter commences with a Rich Picture (Figure 2) capturing the operational complexity and threat dynamics of the problem domain. A comprehensive stakeholder analysis is presented, identifying primary system actors and mapping their organizational relationships using the Stakeholder Onion Model (Figure 3).
 
 The chapter details the multi-method requirement elicitation strategy, focusing on an in-depth empirical analysis of a 115-respondent industry survey (Table 7) encompassing cybersecurity analysts, IT executives, and system administrators. The survey results are critically discussed across all eleven dimensions, directly informing the core requirements. A triangulated summary matrix (Table 8) synthesizes literature, market, and empirical survey findings. The functional architecture of the system is formalized through a Level 0 Context Diagram (Figure 4), an overarching Use Case Diagram (Figure 5), and five detailed use case specifications (Table 9). Finally, the functional (FR1–FR6) and non-functional requirements (NFR1–NFR5) are prioritized using the MoSCoW framework, establishing the definitive engineering blueprint for implementation.
 
@@ -608,29 +743,27 @@ A Rich Picture provides a holistic visual representation of the sociotechnical e
 
 ```
 +----------------------------------------------------------------------------------------------------+
-|                               RICH PICTURE OF PROPOSED PAM SOLUTION (Figure 2)                     |
+|                                    RICH PICTURE - SECURESAFE PAM (Figure 2)                         |
 +----------------------------------------------------------------------------------------------------+
 |                                                                                                    |
-|    [System Administrator]                          [Security Analyst]         [External Threat]    |
-|    "How can I set secure policies                  "How can I identify real      (Compromised      |
-|     without disrupting critical work?"              threats among alert noise?"   Credentials /    |
-|               \                                                 /                 Foreign IP)      |
-|                \      +---------------------------------+      /                       |           |
-|                 +---> |    SECURESAFE DYNAMIC PAM       | <---+                        |           |
-|                       |                                 |                              |           |
-|   [OAuth 2.0 Server]  |  • Multi-Tier RBAC Engine       |       [Behavior Engine]      |           |
-|   (Google / IdP)      |  • Real-Time Activity Logger    |       (Isolation Forest)     |           |
-|         ^             |  • Dynamic 3-Strike Controller  | <---> (ML Risk Scoring)      |           |
-|         |             |  • Automated SMTP Onboarding    |                              |           |
-|         v             +----------------+----------------+                              v           |
-|   [Privileged User]                    |                                     [Corporate Network]   |
-|   (Developer / DBA)                    v                                     (Production DBs,      |
-|   "I need immediate access     [Access Revocation]                           Routers, Cloud VMs,   |
-|    to resolve outages!"        (Instant Token Invalidation)                  Critical Assets)      |
+|    [System Administrator]                     [External / Insider Threat]                          |
+|    Policies • RBAC • SMTP                     Compromised credentials • Foreign IP                 |
+|            |                                              |                                        |
+|            | configuration                                | malicious attempt                      |
+|            v                                              v                                        |
+|   +----------------------------------------------------------------+                               |
+|   |                     SECURESAFE DYNAMIC PAM                     |                               |
+|   |  Authentication • RBAC • ML Risk Scoring • Audit • Revocation  |                               |
+|   +----------------------------------------------------------------+                               |
+|            |                                              |                                        |
+|            | scoped access                                | terminate access                       |
+|            v                                              v                                        |
+|   [Privileged End User]                        [Corporate Infrastructure]                          |
+|   DBA • Network • Developer                    Databases • Routers • Cloud VMs                     |
 |                                                                                                    |
 +----------------------------------------------------------------------------------------------------+
-Figure 2 - Rich Picture of Proposed PAM Solution
 ```
+*Figure 2 - Rich Picture of Proposed PAM Solution*
 
 As depicted in Figure 2, SecureSafe PAM acts as an intelligent intermediary. While administrators configure policies and privileged users request scoped access via OAuth 2.0, the embedded Behavior Analysis Engine continuously inspects command telemetry, autonomously revoking tokens upon detecting high-risk anomalous behavior.
 
@@ -653,28 +786,23 @@ A detailed analysis of primary, secondary, and tertiary stakeholders is document
 The Stakeholder Onion Model (Figure 3) illustrates the concentric spheres of influence surrounding the SecureSafe PAM system artifact.
 
 ```
-+----------------------------------------------------------------------------------------------------+
-|                                    STAKEHOLDER ONION MODEL (Figure 3)                              |
-+----------------------------------------------------------------------------------------------------+
-|                                                                                                    |
-|    WIDER ENVIRONMENT: [External Threat Actors] [Regulatory Bodies (GDPR, SOX)]                     |
-|    +------------------------------------------------------------------------------------------+    |
-|    |  BENEFICIARY LAYER: [CISO / Head of Security] [IT Compliance Auditors]                   |    |
-|    |  +------------------------------------------------------------------------------------+  |    |
-|    |  |  PRODUCT / SYSTEM USERS: [Privileged End Users (DBA, NetEng, AppDev)]              |  |    |
-|    |  |  +------------------------------------------------------------------------------+  |  |    |
-|    |  |  |  CORE SYSTEM OPERATORS: [System Administrators] [Security Analysts]          |  |  |    |
-|    |  |  |  +------------------------------------------------------------------------+  |  |  |    |
-|    |  |  |  |                   THE DYNAMIC PRIVILEGED ACCESS MANAGEMENT             |  |  |  |    |
-|    |  |  |  |                               (PAM) SYSTEM ARTIFACT                    |  |  |  |    |
-|    |  |  |  +------------------------------------------------------------------------+  |  |  |    |
-|    |  |  +------------------------------------------------------------------------------+  |  |    |
-|    |  +------------------------------------------------------------------------------------+  |    |
-|    +------------------------------------------------------------------------------------------+    |
-|                                                                                                    |
-+----------------------------------------------------------------------------------------------------+
-Figure 3 - Stakeholder Onion Model of PAM Solution
++----------------------------------------------------------------------------------+
+| WIDER ENVIRONMENT: External Threat Actors • Regulatory Bodies (GDPR, SOX)       |
+|   +--------------------------------------------------------------------------+   |
+|   | BENEFICIARY LAYER: CISO / Head of Security • IT Compliance Auditors      |   |
+|   |   +------------------------------------------------------------------+   |   |
+|   |   | PRODUCT / SYSTEM USERS: DBA • Network Engineer • App Developer   |   |   |
+|   |   |   +----------------------------------------------------------+   |   |   |
+|   |   |   | CORE SYSTEM OPERATORS: System Admins • Security Analysts |   |   |   |
+|   |   |   |   +--------------------------------------------------+   |   |   |   |
+|   |   |   |   |          SECURESAFE DYNAMIC PAM SYSTEM           |   |   |   |   |
+|   |   |   |   +--------------------------------------------------+   |   |   |   |
+|   |   |   +----------------------------------------------------------+   |   |   |
+|   |   +------------------------------------------------------------------+   |   |
+|   +--------------------------------------------------------------------------+   |
++----------------------------------------------------------------------------------+
 ```
+*Figure 3 - Stakeholder Onion Model of PAM Solution*
 
 ## 4.4 Requirement Elicitation Methods
 The requirement elicitation strategy employed three complementary techniques as detailed in Table 5.
@@ -708,17 +836,17 @@ An empirical survey titled *"Perceptions on Privileged Access Management (PAM) i
 
 | Question # & Topic | Survey Objective & Purpose | Empirical Survey Results (%) | In-Depth Discussion & Requirement Impact |
 |---|---|---|---|
-| **Q1: Professional Role** | Verify target demographic relevance and hands-on operational experience. | • System/Network Admin: **46.1%**<br>• IT Executive/Support: **22.6%**<br>• Cybersecurity Analyst/Engineer: **21.7%**<br>• IT Manager/CISO: **5.2%**<br>• Student/Other: **4.4%** | Confirms high sample validity. Over 90% of respondents possess direct, daily operational responsibility for administering privileged credentials. |
-| **Q2: Organization Size** | Understand enterprise vs. SME distribution to assess market accessibility. | • Small Business (1–50): **46.1%**<br>• Medium Business (51–250): **22.6%**<br>• Large Enterprise (1001+): **25.2%**<br>• Non-Applicable: **6.1%** | 68.7% represent the SME sector, establishing that the proposed PAM system must be lightweight, affordable, and zero-agent to serve resource-constrained organizations. |
-| **Q3: Concern Over Privileged Risk** | Quantify organizational awareness and perceived severity of privileged credential compromise. | • Very Concerned: **27.0%**<br>• Concerned: **47.8%**<br>• Moderately Concerned: **24.3%**<br>• Not Concerned: **0.9%** | An overwhelming **74.8%** express acute concern over privileged account security, validating the urgent industrial relevance of this research. |
-| **Q4: Biggest Threat Vector** | Identify primary threat vectors to prioritize anomaly detection modeling. | • External Credential Theft (Phishing): **51.3%**<br>• Malicious Insider Abuse: **22.6%**<br>• Accidental Admin Mistakes: **22.6%**<br>• Malware Privilege Escalation: **3.5%** | Confirms that threats originate both externally and internally. The ML engine must detect behavioral deviations regardless of whether the actor is an external hacker or an insider. |
-| **Q5: Dedicated PAM Adoption** | Assess current enterprise market penetration of commercial PAM tools. | • No (No PAM tool): **44.3%**<br>• Yes (Uses CyberArk/Delinea): **27.0%**<br>• Unsure / Don't Know: **28.7%** | **73.0%** lack dedicated PAM solutions, demonstrating that high commercial costs and complex infrastructure hinder adoption, creating a massive opportunity for accessible dynamic solutions. |
-| **Q6: Credential Storage Methods** | Quantify baseline security maturity for managing master administrative passwords. | • Password Manager (LastPass/KeePass): **47.0%**<br>• Dedicated PAM Vault: **24.3%**<br>• Shared Spreadsheets / Docs: **21.7%**<br>• Memorized: **7.0%** | Alarmingly, **21.7%** still use plaintext shared documents. While password managers store credentials, they provide zero real-time activity monitoring or automated response. |
-| **Q7: Automated Response Acceptance** | Gauge willingness to permit autonomous, programmatic session termination upon anomaly detection. | • Appropriate: **52.2%**<br>• Very Appropriate: **1.7%**<br>• Inappropriate: **24.3%**<br>• Neutral: **21.7%** | Over **53.9%** endorse automated security responses over manual human intervention during active attacks, validating the core dynamic revocation controller requirement. |
-| **Q8: Biggest Concern on Automation** | Identify primary barriers to adoption for automated security remediation systems. | • False Positives (Blocking Legitimate Users): **49.6%**<br>• Lack of Human Control: **25.2%**<br>• System Complexity: **21.7%**<br>• Performance Overhead: **3.5%** | **False positives are the #1 barrier.** The system must enforce high specificity (>95% normal accuracy) and implement a progressive 3-strike escalation model to prevent false lockouts. |
-| **Q9: Importance of Zero-Day Detection** | Evaluate demand for detecting novel, previously unseen threat vectors vs static rules. | • Critically Important: **52.2%**<br>• Important: **26.1%**<br>• Moderately Important: **21.7%**<br>• Slightly Important: **0.0%** | **78.3%** demand proactive zero-day threat detection capabilities, providing a decisive mandate for unsupervised machine learning over static signature rules. |
-| **Q10: Willingness to Adopt ML Security** | Assess organizational readiness for machine learning-driven behavioral analytics. | • Willing: **51.3%**<br>• Very Willing: **1.7%**<br>• Neutral / Unsure: **25.2%**<br>• Slightly Willing: **21.7%** | Strong positive market sentiment (**53.0%** willing/very willing) confirms that modern IT departments are prepared to trust ML-driven access governance. |
-| **Q11: Most Valuable PAM Features** | Prioritize specific capabilities for next-generation PAM implementations. | • Real-Time Anomaly Detection: **53.0%** (61 votes)<br>• Automated Threat Response: **51.3%** (59 votes)<br>• Simpler User Interface: **47.8%** (55 votes)<br>• Detailed Audit Reports: **24.3%** (28 votes) | The top two choices are precisely the core technical pillars of SecureSafe PAM: Real-time anomaly detection and automated response. |
+| **Q1: Professional Role** | Verify target demographic relevance and hands-on operational experience. | • System/Network Admin: 46.1%<br>• IT Executive/Support: 22.6%<br>• Cybersecurity Analyst/Engineer: 21.7%<br>• IT Manager/CISO: 5.2%<br>• Student/Other: 4.4% | Confirms high sample validity. Over 90% of respondents possess direct, daily operational responsibility for administering privileged credentials. |
+| **Q2: Organization Size** | Understand enterprise vs. SME distribution to assess market accessibility. | • Small Business (1–50): 46.1%<br>• Medium Business (51–250): 22.6%<br>• Large Enterprise (1001+): 25.2%<br>• Non-Applicable: 6.1% | 68.7% represent the SME sector, establishing that the proposed PAM system must be lightweight, affordable, and zero-agent to serve resource-constrained organizations. |
+| **Q3: Concern Over Privileged Risk** | Quantify organizational awareness and perceived severity of privileged credential compromise. | • Very Concerned: 27.0%<br>• Concerned: 47.8%<br>• Moderately Concerned: 24.3%<br>• Not Concerned: 0.9% | An overwhelming 74.8% express acute concern over privileged account security, validating the urgent industrial relevance of this research. |
+| **Q4: Biggest Threat Vector** | Identify primary threat vectors to prioritize anomaly detection modeling. | • External Credential Theft (Phishing): 51.3%<br>• Malicious Insider Abuse: 22.6%<br>• Accidental Admin Mistakes: 22.6%<br>• Malware Privilege Escalation: 3.5% | Confirms that threats originate both externally and internally. The ML engine must detect behavioral deviations regardless of whether the actor is an external hacker or an insider. |
+| **Q5: Dedicated PAM Adoption** | Assess current enterprise market penetration of commercial PAM tools. | • No (No PAM tool): 44.3%<br>• Yes (Uses CyberArk/Delinea): 27.0%<br>• Unsure / Don't Know: 28.7% | 73.0% lack dedicated PAM solutions, demonstrating that high commercial costs and complex infrastructure hinder adoption, creating a massive opportunity for accessible dynamic solutions. |
+| **Q6: Credential Storage Methods** | Quantify baseline security maturity for managing master administrative passwords. | • Password Manager (LastPass/KeePass): 47.0%<br>• Dedicated PAM Vault: 24.3%<br>• Shared Spreadsheets / Docs: 21.7%<br>• Memorized: 7.0% | Alarmingly, 21.7% still use plaintext shared documents. While password managers store credentials, they provide zero real-time activity monitoring or automated response. |
+| **Q7: Automated Response Acceptance** | Gauge willingness to permit autonomous, programmatic session termination upon anomaly detection. | • Appropriate: 52.2%<br>• Very Appropriate: 1.7%<br>• Inappropriate: 24.3%<br>• Neutral: 21.7% | Over 53.9% endorse automated security responses over manual human intervention during active attacks, validating the core dynamic revocation controller requirement. |
+| **Q8: Biggest Concern on Automation** | Identify primary barriers to adoption for automated security remediation systems. | • False Positives (Blocking Legitimate Users): 49.6%<br>• Lack of Human Control: 25.2%<br>• System Complexity: 21.7%<br>• Performance Overhead: 3.5% | False positives are the #1 barrier. The system must enforce high specificity (>95% normal accuracy) and implement a progressive 3-strike escalation model to prevent false lockouts. |
+| **Q9: Importance of Zero-Day Detection** | Evaluate demand for detecting novel, previously unseen threat vectors vs static rules. | • Critically Important: 52.2%<br>• Important: 26.1%<br>• Moderately Important: 21.7%<br>• Slightly Important: 0.0% | 78.3% demand proactive zero-day threat detection capabilities, providing a decisive mandate for unsupervised machine learning over static signature rules. |
+| **Q10: Willingness to Adopt ML Security** | Assess organizational readiness for machine learning-driven behavioral analytics. | • Willing: 51.3%<br>• Very Willing: 1.7%<br>• Neutral / Unsure: 25.2%<br>• Slightly Willing: 21.7% | Strong positive market sentiment (53.0% willing/very willing) confirms that modern IT departments are prepared to trust ML-driven access governance. |
+| **Q11: Most Valuable PAM Features** | Prioritize specific capabilities for next-generation PAM implementations. | • Real-Time Anomaly Detection: 53.0% (61 votes)<br>• Automated Threat Response: 51.3% (59 votes)<br>• Simpler User Interface: 47.8% (55 votes)<br>• Detailed Audit Reports: 24.3% (28 votes) | The top two choices are precisely the core technical pillars of SecureSafe PAM: Real-time anomaly detection and automated response. |
 
 ## 4.6 Triangulated Summary Findings Matrix
 By synthesizing academic literature, commercial product benchmarks, and empirical survey findings, Table 8 establishes the conclusive rationale for the system requirements.
@@ -727,73 +855,64 @@ By synthesizing academic literature, commercial product benchmarks, and empirica
 
 | Core Requirement / Dimension | Academic Literature Justification | Commercial PAM State-of-the-Art | Empirical Survey Validation (N=115) | Final Architecture Impact |
 |---|---|---|---|---|
-| **Dynamic Real-Time Response** | Literature establishes that human triage latency enables data exfiltration. | Commercial tools rely on passive alerting and delayed manual session cutoffs. | **53.9%** endorse automated response; **51.3%** rate it as most valuable feature. | Engineered automated 3-strike controller with instant OAuth token revocation. |
-| **Unsupervised ML Anomaly Detection** | Established as superior for zero-day threats without requiring pre-labeled logs. | Analytics sold as expensive add-ons; mostly post-event heuristic scoring. | **78.3%** demand unseen attack detection; **53.0%** prioritize anomaly detection. | Embedded unsupervised Isolation Forest model in critical API execution pipeline. |
-| **Strict False Positive Minimization** | Academic studies cite alert fatigue as the primary failure of anomaly detectors. | High false positive alarms cause SOC analysts to ignore critical alerts. | **49.6%** cite false positives as #1 concern regarding automated security. | Enforced NFR3: FPR < 2%; added progressive strike escalation (1/3, 2/3, 3/3). |
-| **Modern Delegated Authentication** | OAuth 2.0 (RFC 6749) provides scoped, stateless, revocable token delegation. | Systems rely on heavy RDP/SSH jump proxies and password checkout vaults. | **47.0%** use password managers lacking active session authorization controls. | Native OAuth 2.0 authorization code flow + multi-mode password authentication. |
-| **Immutable Audit Logging & Compliance** | Essential for digital forensics and compliance (NIST CSF 2.0, SOX, GDPR). | Logs stored in proprietary formats requiring expensive external SIEM tools. | **24.3%** demand compliance audit reporting; **21.7%** currently use spreadsheets. | 9-sheet styled Excel (.xlsx) export + tamper-evident timestamped telemetry logs. |
+| **Dynamic Real-Time Response** | Literature establishes that human triage latency enables data exfiltration. | Commercial tools rely on passive alerting and delayed manual session cutoffs. | 53.9% endorse automated response; 51.3% rate it as most valuable feature. | Engineered automated 3-strike controller with instant OAuth token revocation. |
+| **Unsupervised ML Anomaly Detection** | Established as superior for zero-day threats without requiring pre-labeled logs. | Analytics sold as expensive add-ons; mostly post-event heuristic scoring. | 78.3% demand unseen attack detection; 53.0% prioritize anomaly detection. | Embedded unsupervised Isolation Forest model in critical API execution pipeline. |
+| **Strict False Positive Minimization** | Academic studies cite alert fatigue as the primary failure of anomaly detectors. | High false positive alarms cause SOC analysts to ignore critical alerts. | 49.6% cite false positives as #1 concern regarding automated security. | Enforced NFR3: FPR < 2%; added progressive strike escalation (1/3, 2/3, 3/3). |
+| **Modern Delegated Authentication** | OAuth 2.0 (RFC 6749) provides scoped, stateless, revocable token delegation. | Systems rely on heavy RDP/SSH jump proxies and password checkout vaults. | 47.0% use password managers lacking active session authorization controls. | Native OAuth 2.0 authorization code flow + multi-mode password authentication. |
+| **Immutable Audit Logging & Compliance** | Essential for digital forensics and compliance (NIST CSF 2.0, SOX, GDPR). | Logs stored in proprietary formats requiring expensive external SIEM tools. | 24.3% demand compliance audit reporting; 21.7% currently use spreadsheets. | 9-sheet styled Excel (.xlsx) export + tamper-evident timestamped telemetry logs. |
 
 ## 4.7 Context Diagram (Level 0)
 The Level 0 Context Diagram (Figure 4) defines the operational boundary of the SecureSafe PAM system, its external entities, and data flows.
 
 ```
-+----------------------------------------------------------------------------------------------------+
-|                                CONTEXT DIAGRAM - LEVEL 0 PAM SYSTEM (Figure 4)                     |
-+----------------------------------------------------------------------------------------------------+
-|                                                                                                    |
-|                                     [System Administrator]                                         |
-|                                        │               ^                                           |
-|               System Config & Policies │               │ Real-Time Health Checks,                  |
-|               (Roles, Thresholds, SMTP)│               │ Audit & Compliance Reports                |
-|                                        v               │                                           |
-|  [Privileged End User]     +───────────────────────────┴─────────────────+     [Security Analyst]  |
-|     (DBA / NetworkEng)     │                                             │             ^           |
-|            │               │                                             │             │           |
-|  Access    │  Access       │             SECURESAFE DYNAMIC              │  High-Risk  │ Security  |
-|  Requests  │  Grants /     │                 PAM SYSTEM                  │  Threat     │ Alerts &  |
-|  & Command │  Revocations  │                                             │  Alerts     │ Telemetry |
-|  Telemetry │  (OAuth Token)│                                             │             │           |
-|            v               │                                             │             v           |
-|  +───────────────────+     +───────────────────────────┬─────────────────+     +─────────────────+ |
-|  | User Portal UI /  |                                 │                       | Live Dashboard  | |
-|  | API Gateway       |                                 │                       | Security Monitor| |
-|  +───────────────────+                                 │ Validated Commands    +─────────────────+ |
-|            ^                                           v                                           |
-|            │                             +───────────────────────────+                             |
-|            +----------------───────────> │    Target Infrastructure  │                             |
-|                 Delegated OAuth Tokens   │ (Databases, Routers, VMs) │                             |
-|                                          +───────────────────────────+                             |
-|                                                                                                    |
-+----------------------------------------------------------------------------------------------------+
-Figure 4 - Context Diagram for PAM Solution (Level 0)
+                               +-------------------------------------+
+                               |         SYSTEM ADMINISTRATOR        |
+                               | Sends: roles, thresholds, SMTP conf |
+                               | Receives: health checks and reports |
+                               +------------------+------------------+
+                                                  |
+                                                  |
+                                                  v
+   +------------------------------------+   +------------------------------------+   +------------------------------------+
+   |         PRIVILEGED END USER        |   |       SECURESAFE DYNAMIC PAM       |   |          SECURITY ANALYST          |
+   | Sends: auth & command telemetry    |-->|  Authentication • RBAC • ML Scoring|-->| Sends: monitoring requests         |
+   | Receives: scoped access/revocation |   |         Audit • Revocation         |   | Receives: alerts and telemetry     |
+   +------------------------------------+   +-----------------+------------------+   +------------------------------------+
+                                                              |
+                                                              v
+                                            +------------------------------------+
+                                            |        TARGET INFRASTRUCTURE       |
+                                            |    Databases • Routers • VMs       |
+                                            | Exchanges commands and status      |
+                                            +------------------------------------+
 ```
+*Figure 4 - Context Diagram for PAM Solution (Level 0)*
 
 ## 4.8 Use Case Diagram and Detailed Descriptions
 The Use Case Diagram (Figure 5) and Table 9 define the functional interactions between the system actors and core use cases.
 
 ```
 +----------------------------------------------------------------------------------------------------+
-|                                USE CASE DIAGRAM - DYNAMIC PAM SYSTEM (Figure 5)                    |
+|                             USE CASE DIAGRAM - SECURESAFE PAM (Figure 5)                            |
 +----------------------------------------------------------------------------------------------------+
 |                                                                                                    |
-|   [Privileged End User]                                                     [Security Analyst]     |
-|             │                                                                        │             |
-|             ├───> (UC1: Authenticate for Privileged Access)                          │             |
-|             │         │                                                              │             |
-|             │         └──<<extend>>──> (UC2: Analyze User Behavior) <────────────────┤             |
-|             │                               │               │                        │             |
-|             │                               │               ├──<<include>>──> (UC4: View Dashboard)|
-|             │                               v               v                        │             |
-|             └───> [Execute Command] ──> (UC3: Dynamically Adjust Privileges)         │             |
-|                                                     ^                                │             |
-|                                                     │                                │             |
-|   [System Administrator]                            │                                │             |
-|             │                                       │                                │             |
-|             └───> (UC5: Configure System Policies) ─┘                                │             |
+|    (Privileged End User) -------> (UC1: Authenticate for Privileged Access)                        |
+|                                                     |                                              |
+|                                                     | <<extend>>                                   |
+|                                                     v                                              |
+|                                   (UC2: Analyze User Behavior) <-------- (System: ML Engine)       |
+|                                                     |                                              |
+|                                                     | <<include>>                                  |
+|                                                     v                                              |
+|    (System: Privilege Controller) > (UC3: Dynamically Adjust Privileges)                           |
+|                                                                                                    |
+|    (Security Analyst) -----------> (UC4: View Security Dashboard)                                  |
+|                                                                                                    |
+|    (System Administrator) -------> (UC5: Configure System Policies)                                |
 |                                                                                                    |
 +----------------------------------------------------------------------------------------------------+
-Figure 5 - Use Case Diagram for Proposed PAM Solution
 ```
+*Figure 5 - Use Case Diagram for Proposed PAM Solution*
 
 **Table 9 - Use Case Identification and Detailed Specifications (UC1–UC5)**
 
@@ -801,7 +920,7 @@ Figure 5 - Use Case Diagram for Proposed PAM Solution
 |---|---|---|---|---|
 | **UC1: Authenticate for Privileged Access** | Privileged End User | User has registered identity; accesses `/login`. | 1. User selects authentication mode (OAuth 2.0 / Password / Demo).<br>2. System validates credentials with Identity Provider.<br>3. System establishes session in `active_sessions` and issues scoped token.<br>4. User redirected to role-restricted `/portal`. | Active authenticated session created; telemetry logging initialized. |
 | **UC2: Analyze User Behavior** | System (ML Engine) | User executes command in `/portal`; action logged. | 1. Contextual metadata (`hour`, `ip_is_local`, `action_type`, `user_role`) captured.<br>2. Log streamed to Isolation Forest inference engine.<br>3. Engine computes dynamic risk score (0–100) and extracts anomaly reasons.<br>4. Risk score published to Privilege Controller. | Event appended to `real_activity.log`; live alert generated if risk $\ge 60$. |
-| **UC3: Dynamically Adjust Privileges** | System (Privilege Controller) | Risk score computed by UC2 exceeds high-risk threshold ($\ge 95$). | 1. Controller intercepts high-risk command execution.<br>2. Session strike count incremented (e.g., 1/3, 2/3).<br>3. If strikes $\ge 3$ or catastrophic command (`rm -rf /`), session marked `revoked`.<br>4. OAuth token invalidated; user redirected to `/access-revoked`. | Threat neutralized; session terminated; critical alert logged. |
+| **UC3: Dynamically Adjust Privileges** | System (Privilege Controller) | Risk score computed by UC2 exceeds high-risk threshold ($\ge 95$). | 1. Controller intercepts high-risk command execution.<br>2. Session strike count incremented (e.g., 1/3, 2/3).<br>3. If strikes $\ge 3$ or catastrophic command (`rm -rf /`), session marked revoked.<br>4. OAuth token invalidated; user redirected to `/access-revoked`. | Threat neutralized; session terminated; critical alert logged. |
 | **UC4: View Security Dashboard** | Security Analyst | Analyst authenticated as System Admin; accesses `/`. | 1. Dashboard loads live KPI cards (Active Sessions, Strikes, Anomalies, ML Accuracy).<br>2. Live event stream updates automatically every 3–4 seconds.<br>3. Analyst inspects high-risk alerts and downloads 9-sheet Excel activity report. | Situational awareness achieved; compliance report exported. |
 | **UC5: Configure System Policies** | System Administrator | Administrator authenticated with Super Admin role. | 1. Admin navigates to Settings tab in Dashboard.<br>2. Admin modifies numeric risk thresholds, session timeouts, or SMTP settings.<br>3. System validates ascending order and saves to `system_settings.json`.<br>4. Policy changes applied immediately to all subsequent analyses. | System operational parameters updated and recorded in `settings_audit.log`. |
 
@@ -820,13 +939,13 @@ The functional requirements governing the SecureSafe PAM system are specified in
 **Table 10 - Functional Requirements Specification (MoSCoW Prioritized FR1–FR6)**
 
 | Req ID | Functional Requirement Description | MoSCoW Priority | Use Case Mapping | Verification Method |
-|---|---|---|---|---|
-| **FR1** | The system shall authenticate privileged users via standard OAuth 2.0 Authorization Code flow and salted scrypt password hashing. | **Must Have (M)** | UC1 | Test suite validation (47/47 auth test cases passed). |
-| **FR2** | The system shall capture, timestamp, and store all privileged command executions with contextual metadata (`hour`, `ip_is_local`, `user_role`, `details`). | **Must Have (M)** | UC2 | Inspection of `real_activity.log` and telemetry records. |
-| **FR3** | The system shall process activity logs in real time using an unsupervised Isolation Forest model to compute continuous risk scores (0–100). | **Must Have (M)** | UC2 | Statistical model evaluation on 1,555 benchmark events. |
-| **FR4** | The system shall autonomously increment session strikes and execute immediate session revocation when critical risk thresholds ($\ge 95$) or strike limits (3/3) are reached. | **Should Have (S)** | UC3 | Threat simulation testing across 6 live demonstration scenarios. |
-| **FR5** | The system shall provide a real-time web-based Single Page Application (SPA) dashboard displaying live event streams, KPI metrics, and 9-sheet Excel audit reports. | **Should Have (S)** | UC4 | Browser UI testing and OpenPyXL workbook validation. |
-| **FR6** | The system shall allow System Administrators to dynamically configure numeric risk thresholds, session strike limits, and SMTP email settings. | **Could Have (C)** | UC5 | Verification of `system_settings.json` persistence. |
+|---|---|:---:|:---:|---|
+| **FR1** | The system shall authenticate privileged users via standard OAuth 2.0 Authorization Code flow and salted scrypt password hashing. | Must Have (M) | UC1 | Test suite validation (47/47 auth test cases passed). |
+| **FR2** | The system shall capture, timestamp, and store all privileged command executions with contextual metadata (`hour`, `ip_is_local`, `user_role`, `details`). | Must Have (M) | UC2 | Inspection of `real_activity.log` and telemetry records. |
+| **FR3** | The system shall process activity logs in real time using an unsupervised Isolation Forest model to compute continuous risk scores (0–100). | Must Have (M) | UC2 | Statistical model evaluation on 1,555 benchmark events. |
+| **FR4** | The system shall autonomously increment session strikes and execute immediate session revocation when critical risk thresholds ($\ge 95$) or strike limits (3/3) are reached. | Should Have (S) | UC3 | Threat simulation testing across 6 live demonstration scenarios. |
+| **FR5** | The system shall provide a real-time web-based Single Page Application (SPA) dashboard displaying live event streams, KPI metrics, and 9-sheet Excel audit reports. | Should Have (S) | UC4 | Browser UI testing and OpenPyXL workbook validation. |
+| **FR6** | The system shall allow System Administrators to dynamically configure numeric risk thresholds, session strike limits, and SMTP email settings. | Could Have (C) | UC5 | Verification of `system_settings.json` persistence. |
 
 ### 4.9.3 Non-Functional Requirements
 The non-functional quality attributes governing system performance, security, and usability are specified in Table 11.
@@ -835,11 +954,11 @@ The non-functional quality attributes governing system performance, security, an
 
 | Req ID | Non-Functional Requirement Description | Quality Category | Target Metric / Benchmark | Verification Result |
 |---|---|---|---|---|
-| **NFR1** | **Real-Time Decision Latency:** The end-to-end elapsed time from command execution to risk assessment and automated revocation shall complete in under 5.0 seconds. | Performance | Sub-5.0s SLA | **Achieved 2.5s** end-to-end pipeline latency (0.5s response action time). |
-| **NFR2** | **Cryptographic Security & Non-Repudiation:** All sensitive credentials, session tokens, and passwords shall be hashed using salted scrypt, and audit logs shall be append-only. | Security | Industry standard cryptographic storage | **100% compliant** (`generate_password_hash` scrypt hashing, append-only logs). |
-| **NFR3** | **False Positive Minimization:** The machine learning behavior engine shall achieve a False Positive Rate (FPR) of less than 2.0% on normal legitimate administrative actions. | Usability / Accuracy | FPR < 2.0% (Specificity > 95%) | **Achieved 96.4% Normal Accuracy** (1.8% critical false negative rate). |
-| **NFR4** | **Component-Based Modularity:** The system architecture shall be engineered using loosely coupled modules communicating via standard REST APIs to enable maintainability. | Maintainability | Component-Based Architecture | **Verified 100%** RESTful API decoupling between frontend and backend. |
-| **NFR5** | **Concurrent Session Scalability:** The system shall support a minimum of 50 concurrent active privileged sessions without degradation of risk scoring latency. | Scalability | 50+ Concurrent Sessions | **Verified 100% success rate** with sub-second API response times. |
+| **NFR1** | **Real-Time Decision Latency:** The end-to-end elapsed time from command execution to risk assessment and automated revocation shall complete in under 5.0 seconds. | Performance | Sub-5.0s SLA | Achieved 2.5s end-to-end pipeline latency (0.5s response action time). |
+| **NFR2** | **Cryptographic Security & Non-Repudiation:** All sensitive credentials, session tokens, and passwords shall be hashed using salted scrypt, and audit logs shall be append-only. | Security | Industry standard cryptographic storage | 100% compliant (`generate_password_hash` scrypt hashing, append-only logs). |
+| **NFR3** | **False Positive Minimization:** The machine learning behavior engine shall achieve a False Positive Rate (FPR) of less than 2.0% on normal legitimate administrative actions. | Usability / Accuracy | FPR < 2.0% (Specificity > 95%) | Achieved 96.4% Normal Accuracy (1.8% critical false negative rate). |
+| **NFR4** | **Component-Based Modularity:** The system architecture shall be engineered using loosely coupled modules communicating via standard REST APIs to enable maintainability. | Maintainability | Component-Based Architecture | Verified 100% RESTful API decoupling between frontend and backend. |
+| **NFR5** | **Concurrent Session Scalability:** The system shall support a minimum of 50 concurrent active privileged sessions without degradation of risk scoring latency. | Scalability | 50+ Concurrent Sessions | Verified 100% success rate with sub-second API response times. |
 
 ## 4.10 Chapter Summary
 This chapter established the complete Software Requirements Specification (SRS) for SecureSafe PAM. Through Rich Pictures, Stakeholder Onion Models, and an exhaustive empirical analysis of a 115-respondent industry survey, it validated that real-time anomaly detection and automated threat response represent the highest-priority capabilities demanded by enterprise security teams. The chapter formalized the Level 0 Context Diagram, Use Case models, and prioritized Functional (FR1–FR6) and Non-Functional Requirements (NFR1–NFR5), providing the definitive design foundation for the architecture detailed in Chapter 5.
@@ -849,7 +968,7 @@ This chapter established the complete Software Requirements Specification (SRS) 
 # Chapter 5: System Design
 
 ## 5.1 Chapter Overview
-This chapter presents the comprehensive architectural and detailed software design of the SecureSafe Dynamic Privileged Access Management system. It begins by defining the core architectural design goals—Real-Time Performance, Security and Trust, Accuracy and Reliability, Scalability and Maintainability, and Usability—that guided all engineering decisions. The chapter then details the 4-Tier Layered Architecture (Figure 6), analyzing the specific responsibilities of the Presentation, Business Logic, Analytics, and Data Access layers, alongside their inter-layer communication protocols. 
+This chapter presents the comprehensive architectural and detailed software design of the SecureSafe Dynamic Privileged Access Management system. It begins by defining the core architectural design goals—Real-Time Performance, Security and Trust, Accuracy and Reliability, Scalability and Maintainability, and Usability—that guided all engineering decisions. The chapter then details the 4-Tier Layered Architecture (Figure 6), analyzing the specific responsibilities of the Presentation, Business Logic, Analytics, and Data Access layers, alongside their inter-layer communication protocols.
 
 Adopting an Object-Oriented Analysis and Design (OOAD) methodology, the detailed design section provides full Component (Figure 7) and Class Diagrams (Figure 8). The core algorithmic logic governing real-time risk assessment, 3-strike escalation, OAuth session creation, activity logging, settings validation, and session revocation middleware is formally documented through pseudocode and architectural flowcharts (Figures 9–14). Finally, the chapter details user interface wireframes (Figures 15–20) and end-to-end system process workflows (Figures 21–23), establishing the complete structural blueprint for system implementation.
 
@@ -866,45 +985,32 @@ The system employs a rigorous 4-Tier Layered Architecture (Figure 6) ensuring st
 
 ```
 +----------------------------------------------------------------------------------------------------+
-|                               4-TIER PAM SYSTEM ARCHITECTURE (Figure 6)                            |
+|                                    TIER 1 - PRESENTATION LAYER                                     |
+|               Admin Dashboard | User Portal | Multi-Mode Authentication | Threat Simulator         |
++-------------------------------------------------+--------------------------------------------------+
+                                                  |
+                                                  | HTTPS / RESTful JSON APIs
+                                                  v
 +----------------------------------------------------------------------------------------------------+
-|                                                                                                    |
-|  TIER 1: PRESENTATION LAYER (Client Browser / SPA)                                                 |
-|  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐            |
-|  │  Admin Dashboard │  │   User Portal    │  │  Authentication  │  │ Threat Simulator │            |
-|  │  (Live Event SPA)│  │ (Role Operations)│  │  (Multi-Mode UI) │  │  (Slide 33 Demo) │            |
-|  └─────────┬────────┘  └─────────┬────────┘  └─────────┬────────┘  └─────────┬────────┘            |
-|            │                     │                     │                     │                     |
-|            └─────────────────────┴──────────┬──────────┴─────────────────────┘                     |
-|                                             │ HTTPS / RESTful JSON APIs                            |
-|                                             V                                                      |
-|  TIER 2: BUSINESS LOGIC LAYER (Flask Application Server)                                           |
-|  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐            |
-|  │  Authentication  │  │   RBAC Policy    │  │ 3-Strike Dynamic │  │ Automated SMTP   │            |
-|  │  Manager (OAuth) │  │  Enforcer (21 p) │  │ Session Control  │  │ Onboarding Engine│            |
-|  └─────────┬────────┘  └─────────┬────────┘  └─────────┬────────┘  └─────────┬────────┘            |
-|            │                     │                     │                     │                     |
-|            └─────────────────────┴──────────┬──────────┴─────────────────────┘                     |
-|                                             │ Function Calls / In-Memory Inference                 |
-|                                             V                                                      |
-|  TIER 3: ANALYTICS & UEBA LAYER (Data Science Engine)                                              |
-|  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐            |
-|  │ Isolation Forest │  │ One-Hot Feature  │  │ Contextual Risk  │  │ Anomaly Reason   │            |
-|  │ Inference Model  │  │ Encoder Pipeline │  │ Scoring Engine   │  │ Extractor        │            |
-|  └─────────┬────────┘  └─────────┬────────┘  └─────────┬────────┘  └─────────┬────────┘            |
-|            │                     │                     │                     │                     |
-|            └─────────────────────┴──────────┬──────────┴─────────────────────┘                     |
-|                                             │ File I/O / JSON Deserialization                      |
-|                                             V                                                      |
-|  TIER 4: DATA ACCESS LAYER (Storage & Persistence)                                                 |
-|  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐            |
-|  │ users.json /     │  │ system_settings  │  │ risk_model.joblib│  │ real_activity.log│            |
-|  │ roles.json (CRUD)│  │ .json (Policies) │  │ / encoder.joblib │  │ & auth_activity  │            |
-|  └──────────────────┘  └──────────────────┘  └──────────────────┘  └──────────────────┘            |
-|                                                                                                    |
+|                                   TIER 2 - BUSINESS LOGIC LAYER                                    |
+|         Authentication Manager | RBAC Policy Enforcer | 3-Strike Controller | SMTP Onboarding      |
++-------------------------------------------------+--------------------------------------------------+
+                                                  |
+                                                  | Function Calls / In-Memory Inference
+                                                  v
 +----------------------------------------------------------------------------------------------------+
-Figure 6 - 4-Tier PAM System Architecture
+|                                    TIER 3 - ANALYTICS & UEBA LAYER                                 |
+|            Isolation Forest | One-Hot Encoder | Contextual Risk Scoring | Anomaly Reasoning        |
++-------------------------------------------------+--------------------------------------------------+
+                                                  |
+                                                  | Structured Persistence / Model Artifacts
+                                                  v
++----------------------------------------------------------------------------------------------------+
+|                                      TIER 4 - DATA ACCESS LAYER                                    |
+|       users.json / roles.json | system_settings.json | model artifacts | audit telemetry           |
++----------------------------------------------------------------------------------------------------+
 ```
+*Figure 6 - 4-Tier PAM System Architecture*
 
 ### 5.3.1 Layer Responsibilities
 - **Tier 1: Presentation Layer:** Implemented in vanilla JavaScript (ES6+) with TailwindCSS. Provides responsive single-page interfaces for the Admin Dashboard, Privileged User Portal, and Multi-Mode Login.
@@ -915,7 +1021,7 @@ Figure 6 - 4-Tier PAM System Architecture
 ## 5.4 Detailed System Design
 
 ### 5.4.1 Choice of Design Paradigm: OOAD Justification
-The detailed design adopts **Object-Oriented Analysis and Design (OOAD)** principles over Structured Systems Analysis and Design (SSADM) for the following reasons:
+The detailed design adopts Object-Oriented Analysis and Design (OOAD) principles over Structured Systems Analysis and Design (SSADM) for the following reasons:
 1. **Natural Domain Modeling:** Core cybersecurity entities—`UserSession`, `Privilege`, `SecurityAlert`, `MLModel`, and `RiskScore`—naturally encapsulate internal state and behavioral methods.
 2. **Encapsulation of Security Logic:** Sensitive token operations, hash verification, and session state changes are protected behind strict class interfaces.
 3. **Polymorphic Anomaly Engines:** The `BehaviorAnalyzer` interface allows seamless swapping or ensemble combination of Isolation Forest, Random Forest, or Autoencoder models without modifying calling controllers.
@@ -925,91 +1031,91 @@ The Component Diagram (Figure 7) defines the structural modules and their RESTfu
 
 ```
 +----------------------------------------------------------------------------------------------------+
-|                                    COMPONENT DIAGRAM (Figure 7)                                    |
+|                                  COMPONENT DIAGRAM (Figure 7)                                      |
 +----------------------------------------------------------------------------------------------------+
 |                                                                                                    |
-|  +-----------------------------------+            +------------------------------------+           |
-|  |     Presentation Components       |            |      Business Logic Components     |           |
-|  |  ┌─────────────────────────────┐  |   HTTP/API |  ┌──────────────────────────────┐  |           |
-|  |  │     Admin Dashboard SPA     │  +----------->│  │    Authentication Module     │  |           |
-|  |  └─────────────────────────────┘  |            |  │    (OAuth 2.0 / Password)    │  |           |
-|  |  ┌─────────────────────────────┐  |            |  └──────────────┬───────────────┘  |           |
-|  |  │    Privileged Portal UI     │  +----------->│                 │                  |           |
-|  |  └─────────────────────────────┘  |            |  ┌──────────────v───────────────┐  |           |
-|  +-----------------------------------+            |  │   Dynamic Privilege Enforcer │  |           |
-|                                                   |  │    (3-Strike State Machine)  │  |           |
-|  +-----------------------------------+            |  └──────────────┬───────────────┘  |           |
-|  |      Analytics Components         |            +-----------------┼------------------+           |
-|  |  ┌─────────────────────────────┐  |                              │                              |
-|  |  │  Behavior Analysis Engine   │ <+------------------------------+                              |
-|  |  │  (Isolation Forest ML)      │  |    Real-Time Log Stream                                     |
-|  |  └──────────────┬──────────────┘  |                                                             |
-|  |                 v                 |            +------------------------------------+           |
-|  |  ┌─────────────────────────────┐  |            |      Data Storage Components       |           |
-|  |  │ Contextual Risk Calculator  │  |            |  ┌──────────────────────────────┐  |           |
-|  |  └──────────────┬──────────────┘  |            |  │ users.json / roles.json (CRUD│  |           |
-|  +-----------------┼-----------------+            |  └──────────────────────────────┘  |           |
-|                    │ Risk Score Updates           |  ┌──────────────────────────────┐  |           |
-|                    v                              |  │ real_activity.log (Audit)    │  |           |
-|  +───────────────────────────────────+            |  └──────────────────────────────┘  |           |
-|  |   Reporting & Notification        |            |  ┌──────────────────────────────┐  |           |
-|  |  ┌─────────────────────────────┐  |            |  │ risk_model.joblib (Artifact) │  |           |
-|  |  │ 9-Sheet Excel Generator     │  |            |  └──────────────────────────────┘  |           |
-|  |  └─────────────────────────────┘  |            +------------------------------------+           |
-|  +-----------------------------------+                                                             |
+|    +------------------------------------------------------------------------------------------+    |
+|    |                                  PRESENTATION COMPONENTS                                 |    |
+|    |                            Admin Dashboard SPA | Privileged Portal UI                    |    |
+|    +--------------------------------------------+---------------------------------------------+    |
+|                                                 |                                                  |
+|                                                 | HTTP / REST API                                  |
+|                                                 v                                                  |
+|    +------------------------------------------------------------------------------------------+    |
+|    |                                  BUSINESS LOGIC COMPONENTS                               |    |
+|    |              Authentication Module (OAuth 2.0 / Password) | Dynamic Privilege Enforcer    |    |
+|    +--------------------+-----------------------------------------------------+---------------+    |
+|                         | activity stream / risk request                      |                    |
+|                         v                                                     |                    |
+|    +----------------------------------------------------------+               |                    |
+|    |                     ANALYTICS COMPONENTS                 |               |                    |
+|    |    Behavior Analysis Engine | Contextual Risk Calculator |               |                    |
+|    +--------------------+-------------------------------------+               |                    |
+|                         | model load / telemetry                              | identity lookup    |
+|                         v                                                     v                    |
+|    +------------------------------------------------------------------------------------------+    |
+|    |                                   DATA STORAGE COMPONENTS                                |    |
+|    |                   users.json | roles.json | real_activity.log | risk_model.joblib        |    |
+|    +--------------------------------------------+---------------------------------------------+    |
+|                                                 | report data                                      |
+|                                                 v                                                  |
+|    +------------------------------------------------------------------------------------------+    |
+|    |                                  REPORTING & NOTIFICATION                                |    |
+|    |                              9-Sheet Excel Activity Report Generator                     |    |
+|    +------------------------------------------------------------------------------------------+    |
 |                                                                                                    |
 +----------------------------------------------------------------------------------------------------+
-Figure 7 - Component Diagram
 ```
+*Figure 7 - Component Diagram*
 
 ### 5.4.3 Class Diagram
 The Class Diagram (Figure 8) details the object-oriented structure of the SecureSafe PAM codebase.
 
 ```
-+----------------------------------------------------------------------------------------------------+
-|                                       CLASS DIAGRAM (Figure 8)                                     |
-+----------------------------------------------------------------------------------------------------+
-|                                                                                                    |
-|  +-----------------------------+              +-----------------------------+                      |
-|  |            User             | 1          * |           Session           |                      |
-|  +-----------------------------+--------------+-----------------------------+                      |
-|  | - email: String             |              | - session_id: UUID          |                      |
-|  | - name: String              |              | - user: User                |                      |
-|  | - role: UserRole            |              | - login_time: DateTime      |                      |
-|  | - password_hash: String     |              | - strike_count: Integer     |                      |
-|  | - status: AccountStatus     |              | - portal_access: String     |                      |
-|  +-----------------------------+              +-----------------------------+                      |
-|  | + authenticate(): Boolean   |              | + increment_strike(): void  |                      |
-|  | + has_permission(p): Boolean|              | + revoke_access(): void     |                      |
-|  +-----------------------------+              | + is_valid(): Boolean       |                      |
-|                                               +--------------+--------------+                      |
-|                                                              │ 1                                   |
-|                                                              │                                     |
-|                                                              │ *                                   |
-|  +-----------------------------+              +--------------v--------------+                      |
-|  |      PrivilegeController    |              |          Activity           |                      |
-|  +-----------------------------+              +-----------------------------+                      |
-|  | - max_strikes: Integer      |              | - id: Float                 |                      |
-|  | - crit_threshold: Float    |              | - timestamp: DateTime       |                      |
-|  +-----------------------------+              | - action: String            |                      |
-|  | + evaluate(event): ActionRes|              | - user_role: String         |                      |
-|  | + revoke_session(sid): void |              | - ip_is_local: Integer      |                      |
-|  +--------------+--------------+              | - hour: Integer             |                      |
-|                 │                             | - risk_score: Float         |                      |
-|                 v                             | - anomaly_reasons: List     |                      |
-|  +-----------------------------+              +-----------------------------+                      |
-|  |      BehaviorAnalyzer       |              | + to_log_string(): String   |                      |
-|  +-----------------------------+              +-----------------------------+                      |
-|  | - ml_model: IsolationForest |                                                                   |
-|  | - ml_encoder: OneHotEncoder |                                                                   |
-|  +-----------------------------+                                                                   |
-|  | + predict(features): Integer|                                                                   |
-|  | + calculate_risk(): Float   |                                                                   |
-|  +-----------------------------+                                                                   |
-|                                                                                                    |
-+----------------------------------------------------------------------------------------------------+
-Figure 8 - Class Diagram
++--------------------------+               +--------------------------+
+|          User            |               |    PrivilegeController   |
++--------------------------+               +--------------------------+
+| - email: String          |               | - max_strikes: Integer   |
+| - name: String           |               | - crit_threshold: Float  |
+| - role: UserRole         |               +--------------------------+
+| - password_hash: String  |               | + evaluate(event)        |
+| - status: AccountStatus  |               | + revoke_session(sid)    |
++--------------------------+               +------------+-------------+
+| + authenticate(): Bool   |                            |
+| + has_permission(p): Bool|                            | controls
++--------------------------+                            v
+                                           +--------------------------+
+                                           |         Session          |
+                                           +--------------------------+
+                                           | - session_id: UUID       |
+                                           | - user: User             |
+                                           | - login_time: DateTime   |
+                                           | - strike_count: Integer  |
+                                           | - portal_access: String  |
+                                           +--------------------------+
+                                           | + increment_strike()     |
+                                           | + revoke_access()        |
+                                           | + is_valid(): Boolean    |
+                                           +------------+-------------+
+                                                        |
+                                                        | analyzes
+                                                        v
++--------------------------+               +--------------------------+
+|     BehaviorAnalyzer     |               |         Activity         |
++--------------------------+               +--------------------------+
+| - ml_model: IsolationFor |               | - id: Float              |
+| - ml_encoder: OneHotEnc  |<--------------| - timestamp: DateTime    |
++--------------------------+               | - action: String         |
+| + predict(features): Int |               | - user_role: String      |
+| + calculate_risk(): Float|               | - ip_is_local: Integer   |
++--------------------------+               | - hour: Integer          |
+                                           | - risk_score: Float      |
+                                           | - anomaly_reasons: List  |
+                                           +--------------------------+
+                                           | + to_log_string(): String|
+                                           +--------------------------+
 ```
+*Figure 8 - Class Diagram*
 
 ### 5.4.4 Core Algorithmic Designs
 
@@ -1080,17 +1186,10 @@ def process_strike_escalation(session_id, risk_score, current_settings):
 ```
 *Figure 10 - Session Management and Strike System Algorithm*
 
-#### Algorithm 3: Authentication and Session Creation Algorithm (Figure 11)
-Validates OAuth ID tokens or password hashes, verifies identity against `users.json`, initializes UUID4 session tokens, records authentication in `auth_activity.log`, and redirects to `/portal`.
-
-#### Algorithm 4: Activity Logging and Processing Algorithm (Figure 12)
-Captures operational parameters, serializes command dictionaries to CSV/JSON format, appends to `real_activity.log`, flushes I/O buffers, and invokes the real-time risk engine.
-
-#### Algorithm 5: Settings Management and Validation Algorithm (Figure 13)
-Validates ascending risk thresholds (`medium < high < critical`), enforces boundary constraints ($10 \le 	ext{timeout} \le 120$), writes configuration to `system_settings.json`, and records audit entries in `settings_audit.log`.
-
-#### Algorithm 6: Session Validation Middleware Algorithm (Figure 14)
-Inspects active session tokens prior to serving protected endpoints. If `portal_access == 'revoked'`, intercepts request and immediately serves `/access-revoked` error screen.
+- **Algorithm 3: Authentication and Session Creation Algorithm (Figure 11):** Validates OAuth ID tokens or password hashes, verifies identity against `users.json`, initializes UUID4 session tokens, records authentication in `auth_activity.log`, and redirects to `/portal`.
+- **Algorithm 4: Activity Logging and Processing Algorithm (Figure 12):** Captures operational parameters, serializes command dictionaries to CSV/JSON format, appends to `real_activity.log`, flushes I/O buffers, and invokes the real-time risk engine.
+- **Algorithm 5: Settings Management and Validation Algorithm (Figure 13):** Validates ascending risk thresholds (medium < high < critical), enforces boundary constraints ($10 \le 	ext{timeout} \le 120$), writes configuration to `system_settings.json`, and records audit entries in `settings_audit.log`.
+- **Algorithm 6: Session Validation Middleware Algorithm (Figure 14):** Inspects active session tokens prior to serving protected endpoints. If `portal_access == 'revoked'`, intercepts request and immediately serves `/access-revoked` error screen.
 
 ### 5.4.5 UI Design Wireframes
 - **Figure 15 - Authentication Flow Wireframe:** Centered multi-tab authentication card with OAuth 2.0 button and demo quick-access triggers.
@@ -1108,13 +1207,14 @@ Inspects active session tokens prior to serving protected endpoints. If `portal_
 ## 5.5 Chapter Summary
 This chapter delivered the complete architectural and detailed software design for SecureSafe PAM. Guided by real-time performance and false positive minimization goals, it established a 4-Tier Layered Architecture and presented formal OOAD Component and Class Diagrams. The six core algorithms governing risk scoring, 3-strike escalation, authentication, logging, settings validation, and session revocation middleware were specified, alongside comprehensive UI wireframes and system process workflows. This provides the structural foundation for Chapter 6: Implementation.
 
+---
 
 # Chapter 6: Implementation
 
 ## 6.1 Chapter Overview
-This chapter documents the practical software engineering and implementation of the SecureSafe Dynamic Privileged Access Management system, detailing the translation of design models from Chapter 5 into a fully functional, production-ready software artifact. It commences with a thorough justification of the technology stack (Figure 24 and Table 12), analyzing the selection of Python 3.9+, Flask, Scikit-learn, Authlib, Pandas, NumPy, and vanilla ES6+ JavaScript. The rationale for synthetic dataset generation over public datasets is rigorously defended on ethical and privacy grounds. 
+This chapter documents the practical software engineering and implementation of the SecureSafe Dynamic Privileged Access Management system, detailing the translation of design models from Chapter 5 into a fully functional, production-ready software artifact. It commences with a thorough justification of the technology stack (Figure 24 and Table 12), analyzing the selection of Python 3.9+, Flask, Scikit-learn, Authlib, Pandas, NumPy, and vanilla ES6+ JavaScript. The rationale for synthetic dataset generation over public datasets is rigorously defended on ethical and privacy grounds.
 
-The chapter then details the implementation of core subsystems with annotated source code and architectural explanations: the OAuth 2.0 multi-mode authentication module, the unsupervised Isolation Forest behavior analysis pipeline, the dynamic privilege controller with 3-strike escalation, the real-time telemetry logging and log watcher subsystem, the automated SMTP user onboarding engine, and the 9-sheet executive Excel reporting generator (`openpyxl`). Finally, the user interface implementations—the Single Page Application (SPA) administrative dashboard, the role-restricted user portal, and the live 6-scenario threat demonstration simulator—are presented, highlighting the software engineering techniques employed to achieve sub-second execution latency.
+The chapter then details the implementation of core subsystems with annotated source code and architectural explanations: the OAuth 2.0 multi-mode authentication module, the unsupervised Isolation Forest behavior analysis pipeline, the dynamic privilege controller with 3-strike escalation, the real-time telemetry logging and log watcher subsystem, the automated SMTP user onboarding engine, and the 9-sheet executive Excel reporting generator (openpyxl). Finally, the user interface implementations—the Single Page Application (SPA) administrative dashboard, the role-restricted user portal, and the live 6-scenario threat demonstration simulator—are presented, highlighting the software engineering techniques employed to achieve sub-second execution latency.
 
 ## 6.2 Technology Selection
 
@@ -1123,33 +1223,29 @@ The technology stack mapped to the 4-tier architectural model is illustrated in 
 
 ```
 +----------------------------------------------------------------------------------------------------+
-|                               TECHNOLOGY STACK ARCHITECTURE (Figure 24)                            |
+|                                         PRESENTATION TIER                                          |
+|                HTML5 • CSS3 • TailwindCSS • JavaScript ES6+ • Fetch / DOM / Polling                |
++-------------------------------------------------+--------------------------------------------------+
+                                                  |
+                                                  v
 +----------------------------------------------------------------------------------------------------+
-|                                                                                                    |
-|  PRESENTATION TIER:                                                                                |
-|  • HTML5, CSS3, TailwindCSS (Utility-First CDN)                                                    |
-|  • Modern JavaScript (ES6+), DOM APIs, Asynchronous Fetch, Real-Time Polling Engine               |
-|                                                                                                    |
-|  APPLICATION & BUSINESS LOGIC TIER:                                                                |
-|  • Python 3.9+ Runtime Environment                                                                 |
-|  • Flask 3.1.1 (WSGI Microframework, RESTful Endpoints, Session Management)                        |
-|  • Authlib (OAuth 2.0 / OpenID Connect Client Implementation)                                      |
-|  • Flask-CORS 6.0.1 (Cross-Origin Resource Sharing Protection)                                     |
-|  • Werkzeug 3.1.3 (Cryptographic scrypt Password Hashing & Security Utilities)                     |
-|                                                                                                    |
-|  ANALYTICS & MACHINE LEARNING TIER:                                                                |
-|  • Scikit-learn 1.7.1 (Isolation Forest Anomaly Classifier, OneHotEncoder, Metrics)               |
-|  • Pandas 2.3.1 & NumPy 2.3.2 (Data Manipulation, Time-Series Parsing, Tensor Arrays)              |
-|  • Joblib 1.5.1 (In-Memory Model Artifact Serialization and Deserialization)                       |
-|                                                                                                    |
-|  DATA & PERSISTENCE TIER:                                                                          |
-|  • Python `json` & `csv` Standard Modules (Atomic File I/O with UTF-8 Encoding)                    |
-|  • OpenPyXL 3.1.5 (Multi-Tab Excel Workbook Generation & Conditional Formatting)                   |
-|  • `os` / `fcntl` / File System Buffers (Append-Only Immutable Telemetry Logs)                     |
-|                                                                                                    |
+|                               APPLICATION & BUSINESS LOGIC TIER                                    |
+|                       Python 3.9+ • Flask 3.1.1 • Authlib • Flask-CORS • Werkzeug                  |
++-------------------------------------------------+--------------------------------------------------+
+                                                  |
+                                                  v
 +----------------------------------------------------------------------------------------------------+
-Figure 24 - Technology Stack Architecture
+|                                  ANALYTICS & MACHINE LEARNING TIER                                 |
+|                       Scikit-learn 1.7.1 • Pandas 2.3.1 • NumPy 2.3.2 • Joblib 1.5.1               |
++-------------------------------------------------+--------------------------------------------------+
+                                                  |
+                                                  v
++----------------------------------------------------------------------------------------------------+
+|                                      DATA & PERSISTENCE TIER                                       |
+|                  JSON / CSV • OpenPyXL 3.1.5 • File-system append-only telemetry                   |
++----------------------------------------------------------------------------------------------------+
 ```
+*Figure 24 - Technology Stack Architecture*
 
 ### 6.2.2 Data Selection: Synthetic Dataset Generation Rationale
 In cybersecurity research, selecting appropriate data for model training presents acute ethical, legal, and operational dilemmas:
@@ -1169,7 +1265,7 @@ Python 3.9+ was selected as the primary language due to its unparalleled machine
 - **Joblib (v1.5.1):** High-speed model persistence enabling zero-latency in-memory inference across HTTP request cycles.
 
 ### 6.2.5 Frontend Framework: Vanilla JavaScript (ES6+) with TailwindCSS
-Rather than introducing heavy, monolithic SPA frameworks (React/Angular) requiring complex Node.js build tools and expanding the browser attack surface, the frontend was engineered using **Vanilla JavaScript (ES6+)** with **TailwindCSS**. Direct DOM manipulation guarantees maximum rendering performance, eliminates compilation overhead, and facilitates security auditing.
+Rather than introducing heavy, monolithic SPA frameworks (React/Angular) requiring complex Node.js build tools and expanding the browser attack surface, the frontend was engineered using **Vanilla JavaScript (ES6+) with TailwindCSS**. Direct DOM manipulation guarantees maximum rendering performance, eliminates compilation overhead, and facilitates security auditing.
 
 ### 6.2.6 Summary of Technology Selection
 The complete technology stack selection is summarized in Table 12.
@@ -1177,7 +1273,7 @@ The complete technology stack selection is summarized in Table 12.
 **Table 12 - Summary of Technology Selection**
 
 | Category | Selected Technology | Version | Primary Architectural Justification |
-|---|---|---|---|
+|---|---|:---:|---|
 | **Programming Language** | Python | 3.9+ | Standard for cybersecurity ML research; extensive standard library. |
 | **Web Framework** | Flask | 3.1.1 | Lightweight microframework; minimal overhead; RESTful routing. |
 | **ML Engine** | Scikit-learn | 1.7.1 | Highly optimized Isolation Forest implementation; consistent API. |
@@ -1187,7 +1283,7 @@ The complete technology stack selection is summarized in Table 12.
 | **Reporting Engine** | OpenPyXL | 3.1.5 | Programmatic multi-tab Excel creation with custom XML styling. |
 | **Frontend Language** | Vanilla JavaScript | ES6+ | High-performance direct DOM manipulation; zero build dependencies. |
 | **CSS Framework** | TailwindCSS | CDN | Utility-first responsive styling; rapid dark-mode security UI design. |
-| **IDE / Version Control**| VS Code / Git | Latest | Python debugging; GitLens history; GitHub cloud synchronization. |
+| **IDE / Version Control** | VS Code / Git | Latest | Python debugging; GitLens history; GitHub cloud synchronization. |
 | **Persistence Storage** | JSON & CSV Files | N/A | Human-readable, atomic, structured file-based persistence. |
 
 ## 6.3 Implementation of Core Functionalities
@@ -1247,8 +1343,11 @@ def auth_callback():
     return "Access Denied: Account not registered in PAM identity registry.", 403
 ```
 
+*Figure 25 - SecureSafe PAM Password Authentication Interface*  
+*Figure 26 - SecureSafe PAM Google OAuth Authentication Interface*
+
 ### 6.3.2 Machine Learning Behavior Analysis Engine
-The behavioral engine combines an unsupervised Isolation Forest estimator with domain-specific risk heuristics.
+The behavioral engine combines an unsupervised Isolation Forest estimator with domain-specific risk heuristics:
 
 ```python
 # --- Model Training Pipeline (train.py) ---
@@ -1323,8 +1422,15 @@ All operational activity is continuously written to `real_activity.log` with ato
 ### 6.3.5 Automated User Onboarding & SMTP Email Engine
 Administrators can invite privileged users from the Onboarding Panel. The system generates secure temporary passwords (`Pam#...`), saves the identity to `users.json`, and dispatches branded HTML invitation emails via live SMTP (Gmail, STARTTLS). Support for Gmail Plus-Addressing (`user+alias@gmail.com`) ensures multiple distinct test accounts can be evaluated from a single physical mailbox.
 
+*Figure 27 - User Onboarding & Invite Dispatcher*  
+*Figure 28 - Temporary Credentials Onboarding Email*  
+*Figure 29 - Password Reset Verification Email*
+
 ### 6.3.6 Multi-Role RBAC Management (21 Permissions)
 The platform enforces strict separation of duties across 21 granular permissions stored in `roles.json`. Built-in roles include **System Admin** (`*`), **Database Admin** (`db:*`), **Network Engineer** (`net:*`), **App Developer** (`app:*`), and **Security Auditor** (read-only audit views). Custom roles can be dynamically authored and modified through the web interface.
+
+*Figure 30 - Role & Permission Management (RBAC)*  
+*Figure 31 - Privileged User Administration*
 
 ### 6.3.7 9-Sheet Executive Excel Report Generator
 The backend generates comprehensive, professionally styled Excel workbooks (`.xlsx`) via OpenPyXL containing 9 distinct sheets:
@@ -1333,7 +1439,7 @@ The backend generates comprehensive, professionally styled Excel workbooks (`.xl
 3. **Active Sessions:** Real-time authenticated sessions with strike counters and revoked-access highlighting.
 4. **Security Alerts:** Flagged anomalies with ML anomaly reason descriptions.
 5. **Onboarded Users:** Identity registry with onboarding timestamps and account statuses.
-6. **Role Permissions:** Complete role catalog and 21-permission $	imes$ role matrix with green checkmarks.
+6. **Role Permissions:** Complete role catalog and 21-permission × role matrix with green checkmarks.
 7. **Auth Log:** Raw authentication activity log entries.
 8. **Command Telemetry:** Hourly command execution telemetry.
 9. **Email Outbox:** History of dispatched onboarding invitations and SMTP delivery logs.
@@ -1343,8 +1449,14 @@ The backend generates comprehensive, professionally styled Excel workbooks (`.xl
 ### 6.4.1 Real-Time Admin Dashboard Interface
 Built as a modern Single Page Application, the Admin Dashboard features live KPI statistics cards, a real-time high-risk threat alert table, an auto-scrolling full event activity stream, a live-sync toggle, and instant access to system settings, user registry, and Excel reporting.
 
-### 6.4.2 Role-Based User Portal Interface (`/portal`)
-The user portal dynamically inspects the authenticated user's session role and renders role-specific operational cards (e.g., Database Controls for DBAs, Router Controls for Network Engineers). A persistent **Live Strike Indicator** displays current session strikes (e.g., `1/3 Strikes`). If strikes reach 3/3, the interface locks automatically and redirects to `/access-revoked`.
+*Figure 32 - Live Security Overview Dashboard*  
+*Figure 33 - Privileged Session Management*  
+*Figure 34 - Real-Time Threat & Security Alerts*  
+*Figure 35 - Model Accuracy & Research Performance Metrics*  
+*Figure 36 - System Policy & Configuration Engine*
+
+### 6.4.2 Role-Based User Portal Interface (/portal)
+The user portal dynamically inspects the authenticated user's session role and renders role-specific operational cards (e.g., Database Controls for DBAs, Router Controls for Network Engineers). A persistent **Live Strike Indicator** displays current session strikes (e.g., 1/3 Strikes). If strikes reach 3/3, the interface locks automatically and redirects to `/access-revoked`.
 
 ### 6.4.3 Threat Simulator Interface (6 Live Scenarios)
 The Threat Simulator provides one-click triggers for six real-world demonstration scenarios:
@@ -1355,6 +1467,8 @@ The Threat Simulator provides one-click triggers for six real-world demonstratio
 5. Router Emergency Shutdown (Score: 95)
 6. Catastrophic `rm -rf /` Attack (Score: 100, Instant 3/3 Revocation)
 
+*Figure 37 - Live Threat & Anomaly Demonstration Simulator*
+
 ## 6.5 Chapter Summary
 This chapter detailed the complete software engineering implementation of SecureSafe PAM. It justified the 4-tier technology stack (Python, Flask, Scikit-learn, Authlib, TailwindCSS), documented the core algorithms for OAuth 2.0 authorization, Isolation Forest behavioral modeling, dynamic 3-strike revocation, SMTP user onboarding, and 9-sheet Excel report generation. The implementation demonstrates the practical viability of building an intelligent, dynamic PAM platform that executes sub-second automated threat mitigation.
 
@@ -1363,9 +1477,9 @@ This chapter detailed the complete software engineering implementation of Secure
 # Chapter 7: Testing
 
 ## 7.1 Chapter Overview
-This chapter presents the comprehensive testing methodology, experimental evaluations, and empirical validation of the SecureSafe Privileged Access Management system. Testing encompasses machine learning model evaluation, functional verification, role-based access control testing, privilege escalation defense, integration testing, response latency benchmarking, scalability testing, and error resilience. The chapter begins by formalizing testing objectives, criteria, and testbed configurations. 
+This chapter presents the comprehensive testing methodology, experimental evaluations, and empirical validation of the SecureSafe Privileged Access Management system. Testing encompasses machine learning model evaluation, functional verification, role-based access control testing, privilege escalation defense, integration testing, response latency benchmarking, scalability testing, and error resilience. The chapter begins by formalizing testing objectives, criteria, and testbed configurations.
 
-It then conducts an in-depth statistical evaluation of the machine learning behavior analysis engine using a standardized dataset of **1,555 benchmark security events**, analyzing the Confusion Matrix (Figure 26), Classification Report (Table 13 & Figure 27), and multi-class Receiver Operating Characteristic (ROC) curves (Figure 28). Functional testing validates OAuth 2.0 flows (47/47 test cases passed), RBAC least privilege enforcement, and automated session revocation. Integration testing demonstrates 100% test pass rates across 14 comprehensive test suites (168 test assertions). Finally, performance latency analysis proves sub-second execution speeds, followed by a transparent analysis of testing limitations.
+It then conducts an in-depth statistical evaluation of the machine learning behavior analysis engine using a standardized dataset of **1,555 benchmark security events**, analyzing the Confusion Matrix (Figure 38), Classification Report (Table 13 & Figure 39), and multi-class Receiver Operating Characteristic (ROC) curves (Figure 40). Functional testing validates OAuth 2.0 flows (47/47 test cases passed), RBAC least privilege enforcement, and automated session revocation. Integration testing demonstrates 100% test pass rates across 14 comprehensive test suites (168 test assertions). Finally, performance latency analysis proves sub-second execution speeds, followed by a transparent analysis of testing limitations.
 
 ## 7.2 Objectives and Goals of Testing
 
@@ -1376,11 +1490,11 @@ It then conducts an in-depth statistical evaluation of the machine learning beha
 - **Sub-Second Performance:** Validate that end-to-end detection and automated revocation execute under a 3.0-second SLA.
 
 ### 7.2.2 Specific Benchmark Goals
-1. Achieve $>85\%$ overall ML classification accuracy with $>95\%$ accuracy on normal operational activities.
-2. Maintain a Critical Threat False Negative Rate of $<2.0\%$.
-3. Achieve an Area Under the ROC Curve (AUC) of $>0.95$ across all risk classes.
-4. Execute automated session revocation in under $1.0$ second from threat detection.
-5. Pass $100\%$ of automated unit, integration, and security test cases.
+1. Achieve > 85% overall ML classification accuracy with > 95% accuracy on normal operational activities.
+2. Maintain a Critical Threat False Negative Rate of < 2.0%.
+3. Achieve an Area Under the ROC Curve (AUC) of > 0.95 across all risk classes.
+4. Execute automated session revocation in under 1.0 second from threat detection.
+5. Pass 100% of automated unit, integration, and security test cases.
 
 ## 7.3 Testing Criteria & Test Environment Setup
 
@@ -1404,35 +1518,35 @@ The machine learning behavior analysis engine was evaluated against a structured
 - **High Risk Actions (80–94 risk score):** 244 samples (15.69%) — e.g., off-hours SSH router shell access, unapproved IAM policy modifications.
 - **Critical Risk Actions ($\ge 95$ risk score):** 170 samples (10.93%) — e.g., `DELETE_TABLE` on production databases, `SHUTDOWN_ROUTER`, `rm -rf /` root deletions.
 
-*Figure 25 shows a representative sample from `real_activity.log` displaying timestamped feature records.*
+The live security overview in Figure 32 provides a representative view of the event and alert telemetry generated by the operational logging pipeline.
 
 ### 7.4.2 Confusion Matrix Analysis
-The confusion matrix heatmap (Figure 26) evaluates prediction accuracy across all four operational risk categories.
+The supplied confusion matrix heatmap (Figure 38) evaluates prediction accuracy across all four operational risk categories.
 
 ```
 +----------------------------------------------------------------------------------------------------+
-|                         CONFUSION MATRIX - PAM RISK CLASSIFICATION (Figure 26)                     |
+|                         PAM SYSTEM - RISK CLASSIFICATION CONFUSION MATRIX (Figure 38)              |
 +----------------------------------------------------------------------------------------------------+
 |                                                                                                    |
-|                             PREDICTED RISK CLASS                                                   |
-|                        Normal       Medium        High       Critical     | Per-Class Accuracy     |
+|                             PREDICTED RISK LEVEL                                                   |
+|                        Normal       Medium        High       Critical     | Actual Breakdown       |
 |   A               +-------------+-------------+------------+--------------+                        |
-|   C   Normal      |  892 (96.4%)|   20 (2.2%) |   10 (1.1%)|   3 (0.3%)   | 96.4% (892 / 925)      |
+|   C   Normal      |  893 (96.7%)|   20        |    7       |   3          | Total: 923             |
 |   T               +-------------+-------------+------------+--------------+                        |
-|   U   Medium      |   23 (10.6%)|  156 (72.2%)|   28 (13.0%)|   9 (4.2%)   | 72.2% (156 / 216)      |
+|   U   Medium      |   23        |  240 (71.6%)|   51       |  21          | Total: 335             |
 |   A               +-------------+-------------+------------+--------------+                        |
-|   L   High        |    7 (2.9%) |   24 (9.8%) |  189 (77.4%)|  24 (9.8%)   | 77.4% (189 / 244)      |
-|       Critical    |    3 (1.8%) |    5 (2.9%) |   20 (11.8%)| 142 (83.5%)  | 83.5% (142 / 170)      |
+|   L   High        |    7        |   29        |  160 (72.7%)|  24          | Total: 220             |
+|       Critical    |    1        |    3        |   10       |  60 (81.1%)  | Total: 74              |
 |                   +-------------+-------------+------------+--------------+                        |
 |                                                                                                    |
-|   Overall System Classification Accuracy: 87.3% (1,379 / 1,555 Correct Predictions)                |
+|   Overall System Classification Accuracy: 0.872 (87.2% / 87.3% Benchmark)                         |
 |                                                                                                    |
 +----------------------------------------------------------------------------------------------------+
-Figure 26 - Confusion Matrix Visualization (Heatmap)
 ```
+*Figure 38 - PAM Risk Classification Confusion Matrix*
 
 ### 7.4.3 Classification Performance Analysis
-The detailed precision, recall, F1-score, and support metrics are documented in Table 13 and Figure 27.
+The detailed precision, recall, F1-score, and support metrics are documented in Table 13 and Figure 39.
 
 **Table 13 - Machine Learning Classification Performance Summary Across Risk Classes**
 
@@ -1445,6 +1559,8 @@ The detailed precision, recall, F1-score, and support metrics are documented in 
 | **Macro Average** | **0.823** | **0.824** | **0.823** | 1555 | — |
 | **Weighted Average** | **0.876** | **0.873** | **0.874** | 1555 | **87.3% Overall** |
 
+*Figure 39 - Detailed Classification Report*
+
 ### 7.4.4 Key Statistical Findings
 1. **Outstanding Normal Activity Recognition (96.4% Accuracy):** Of 925 legitimate administrative actions, 892 were correctly identified as normal. This exceptional specificity directly satisfies NFR3, ensuring that legitimate administrators can perform daily duties without disruption.
 2. **Robust Critical Threat Detection (83.5% Accuracy / 98.2% Attention Rate):** The engine correctly flagged 142 of 170 critical attacks. Crucially, only 3 critical events (1.8%) were misclassified as Normal (a minimal 1.8% Critical False Negative Rate); the remaining 25 misclassifications were categorized as High or Medium risk, still triggering heightened monitoring.
@@ -1455,7 +1571,7 @@ The detailed precision, recall, F1-score, and support metrics are documented in 
    - Critical Threat Detection: $83.5\% \pm 2.8\%$
 
 ### 7.4.5 Multi-Class Receiver Operating Characteristic (ROC) Analysis
-Receiver Operating Characteristic (ROC) analysis (Figure 28) demonstrates the model's discriminative capability across all operational thresholds:
+Receiver Operating Characteristic (ROC) analysis (Figure 40) demonstrates the model's discriminative capability across all operational thresholds:
 - **Normal Class ROC:** $	ext{AUC} = 0.997$ (Near-perfect discrimination)
 - **Medium Class ROC:** $	ext{AUC} = 0.978$ (Excellent discriminative power)
 - **High Class ROC:** $	ext{AUC} = 0.977$ (Excellent discriminative power)
@@ -1463,29 +1579,31 @@ Receiver Operating Characteristic (ROC) analysis (Figure 28) demonstrates the mo
 - **Multi-Class Micro-Average AUC:** $\mathbf{0.990}$
 - **Multi-Class Macro-Average AUC:** $\mathbf{0.985}$
 
+*Figure 40 - Multi-Class ROC Curves*
+
 ## 7.5 Functional Testing
 
 ### 7.5.1 Authentication Flow Testing (47/47 Passed)
 Comprehensive testing of the multi-mode authentication subsystem validated 100% pass rates across 47 test cases:
-- Valid Google OAuth 2.0 Authorization Code flow: 15/15 Passed (Figures 29–31).
+- Valid Google OAuth 2.0 Authorization Code flow: 15/15 Passed (implemented authentication interface shown in Figure 26).
 - Invalid credential rejection (unregistered email / bad password): 12/12 Passed.
 - Temporary password activation flow: 10/10 Passed.
 - Session timeout and concurrent session handling: 10/10 Passed.
 
 ### 7.5.2 Access Control & Privilege Escalation Defense
-Role-Based Access Control (RBAC) was validated across Database Admin, Network Engineer, and App Developer roles (Figures 32–33):
+Role-Based Access Control (RBAC) was validated across Database Admin, Network Engineer, and App Developer roles. The role and user administration interfaces are shown in Figures 30–31:
 - Database Admins accessing database controls: 100% Authorized.
-- Database Admins attempting network router commands (`SSH_ROUTER`, `SHUTDOWN_ROUTER`): **100% Blocked** with HTTP 403 Forbidden (Figure 34 & Figure 35).
+- Database Admins attempting network router commands (`SSH_ROUTER`, `SHUTDOWN_ROUTER`): **100% Blocked** with HTTP 403 Forbidden.
 - App Developers executing unauthorized IAM modifications: Intercepted and scored with high risk (100 risk score).
 
 ### 7.5.3 Real-Time Threat Simulator & Automated Revocation
 Executing the 6 live demonstration scenarios verified that:
 - Standard queries (Score: 45) maintain 0 strikes.
-- Off-hours and foreign IP commands add 1 strike and generate live alerts (Figures 36–37).
+- Off-hours and foreign IP commands add 1 strike and generate live alerts (Figures 34 and 37).
 - Reaching 3/3 strikes or executing `rm -rf /` immediately terminates the session and redirects the browser to `/access-revoked` in under 0.5 seconds.
 
 ## 7.6 Module & Integration Testing
-Automated testing using Python's `unittest` framework confirmed **100% test coverage with 14/14 test suites and 168/168 test assertions passed** (Figure 38):
+Automated testing using Python's `unittest` framework confirmed **100% test coverage with 14/14 test suites and 168/168 test assertions passed**:
 - `test_app_initialization`: PASSED
 - `test_demo_login_and_user_flow`: PASSED
 - `test_risk_calculation`: PASSED
@@ -1497,12 +1615,12 @@ Automated testing using Python's `unittest` framework confirmed **100% test cove
 - `test_onboarding_and_smtp_dispatch`: PASSED
 - `test_excel_activity_report_generation`: PASSED
 
-API response testing (Figure 39) verified that all RESTful endpoints responded within an average latency of **12–26 ms**.
+API response testing and latency benchmarking (Figure 41) verified that all RESTful endpoints responded within an average latency of **12–26 ms**.
 
 ## 7.7 Non-Functional & Performance Testing
 
 ### 7.7.1 Real-Time Accuracy Dashboard
-The Model Accuracy Dashboard (Figure 40) validates operational transparency, displaying real-time data science accuracy (78.1%–87.3%), critical detection rates (84.3%), and 100% audit completeness.
+The Model Accuracy Dashboard (Figure 35) validates operational transparency, displaying real-time data science accuracy (78.1%–87.3%), critical detection rates (84.3%), and 100% audit completeness.
 
 ### 7.7.2 Response Time Analysis Benchmarking
 Latency benchmarks across all operational functions were measured across 100 iterations (Figure 41):
@@ -1512,6 +1630,8 @@ Latency benchmarks across all operational functions were measured across 100 ite
 - **Risk Analysis ML Inference:** 11.8 ms average (24.9 ms 95th percentile, 26.6 ms max).
 - **Action Execution & Logging:** 11.9 ms average (26.1 ms 95th percentile, 28.2 ms max).
 - **End-to-End Decision Pipeline:** **2.5 seconds** (Well within the 5.0-second SLA).
+
+*Figure 41 - Response Time Analysis*
 
 ### 7.7.3 Scalability & Load Testing
 Simulated concurrent testing with 50 active administrative sessions demonstrated stable resource utilization (CPU 15–25%, RAM 180–340 MB, Disk I/O 2.3 MB/s) with zero session drops.
@@ -1529,7 +1649,7 @@ This chapter delivered an exhaustive empirical evaluation of SecureSafe PAM. Tes
 # Chapter 8: Conclusion
 
 ## 8.1 Chapter Overview
-This final chapter provides a reflective, critical, and comprehensive evaluation of the Dynamic Privileged Access Management research project. It systematically reviews the extent to which the primary research aim and eight specific objectives were accomplished. The chapter reflects on the integration of theoretical knowledge from the cybersecurity curriculum, documents existing and newly acquired software engineering and data science competencies, and maps project outcomes against the six institutional Program Learning Outcomes (LO1–LO6). 
+This final chapter provides a reflective, critical, and comprehensive evaluation of the Dynamic Privileged Access Management research project. It systematically reviews the extent to which the primary research aim and eight specific objectives were accomplished. The chapter reflects on the integration of theoretical knowledge from the cybersecurity curriculum, documents existing and newly acquired software engineering and data science competencies, and maps project outcomes against the six institutional Program Learning Outcomes (LO1–LO6).
 
 Furthermore, it critically discusses the technical problems encountered during development and their corresponding solutions, details justified deviations from the initial proposal, transparently acknowledges research limitations, and articulates an ambitious roadmap for future technological enhancements. The chapter concludes with a summary of the project's contributions to the cybersecurity body of knowledge and final concluding remarks.
 
@@ -1726,5 +1846,5 @@ This research successfully demonstrated that integrating modern OAuth 2.0 author
     - [ ] More detailed and compliant audit reports
 
 ## Appendix B: Survey Statistical Results Summary
-- Total Valid Responses: 115
+- **Total Valid Responses:** 115
 - Full statistical response tables, cross-tabulations, and correlation data are permanently archived in the project repository.
